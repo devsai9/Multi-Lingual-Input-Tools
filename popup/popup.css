@@ -1,0 +1,39 @@
+/*  THIS STYLESHEET IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
+    STYLESHEET FOR POPUP
+    --------------------------------------------------------------
+    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
+    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
+    --------------------------------------------------------------
+    Path: popup/popup.css
+    --------------------------------------------------------------
+*/
+
+.custom-container {
+    min-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#prompt-options-page {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-icons {
+    float: right;
+    /* margin-top: -20px; */
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.menu-icons > i {
+    cursor: pointer;
+}
+
+.menu-icons > .bi-keyboard {
+    font-size: 25px;
+}
+
+/* .title {
+    margin-left: 55px;
+} */

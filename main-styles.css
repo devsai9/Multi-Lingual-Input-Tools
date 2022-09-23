@@ -1,0 +1,32 @@
+/*  THIS STYLESHEET IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
+    SHARED STYLESHEET
+    --------------------------------------------------------------
+    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
+    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
+    --------------------------------------------------------------
+    Path: main-styles.css
+    --------------------------------------------------------------
+*/
+
+/* Defining Variables & Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@100.7,517&display=swap');
+
+:root {
+    --light: #Bec7c9;
+    --dark: #1c1d25;
+}
+
+/* Adding Shared Page Themes & Fonts */
+*{
+    font-family: 'Fredoka', sans-serif;
+}
+
+*[data-theme="light"], .light-mode {
+    background-color: var(--light) !important;
+    color: black !important;
+}
+
+*[data-theme="dark"], .dark-mode {
+    background-color: var(--dark) !important;
+    color: white !important;
+}

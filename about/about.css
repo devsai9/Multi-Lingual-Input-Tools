@@ -1,0 +1,38 @@
+/*  THIS STYLESHEET IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
+    STYLESHEET FOR ABOUT PAGE
+    --------------------------------------------------------------
+    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
+    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
+    --------------------------------------------------------------
+    Path: about/about.css
+    --------------------------------------------------------------
+*/
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+a {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.light-mode a {
+    color: black;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.links {
+    text-align: center;
+}

@@ -28,11 +28,15 @@ function getChromeVars() {
 function actColorMode(colorModeRestored) {
     if (colorModeRestored == "light") {
         document.getElementById("color-mode-checkbox").checked = false;
-        document.getElementById("color-mode-label").innerText = "Light Mode";
+        document.getElementById("mode-icon").classList.add("bi");
+        document.getElementById("mode-icon").classList.add("bi-brightness-high-fill");
+        //document.getElementById("color-mode-label").innerText = "Light Mode";
         document.getElementsByTagName("body")[0].setAttribute('data-theme', 'light');
     } else if (colorModeRestored == "dark") {
         document.getElementById("color-mode-checkbox").checked = true;
-        document.getElementById("color-mode-label").innerText = "Dark Mode";
+        document.getElementById("mode-icon").classList.add("bi");
+        document.getElementById("mode-icon").classList.add("bi-moon-fill");
+        //document.getElementById("color-mode-label").innerText = "Dark Mode";
         document.getElementsByTagName("body")[0].setAttribute('data-theme', 'dark');
     }
 }
@@ -43,6 +47,8 @@ function actLanguage(languageRestored) {
         document.getElementById('spanish').checked = true;
     } else if (languageRestored == 'french') {
         document.getElementById('french').checked = true;
+    } else if (languageRestored == 'german') {
+        document.getElementById('german').checked = true;
     }
 }
 
@@ -85,6 +91,13 @@ function setLanguage() {
         }, function () {
             setTimeout(function() {document.getElementById("french-label").innerText = "French";}, 1000);
         });
+    } else if (document.getElementById("german").checked == true) {
+        document.getElementById("german-label").innerText = "Syncing...";
+        chrome.storage.sync.set({
+            language: 'german'
+        }, function () {
+            setTimeout(function() {document.getElementById("german-label").innerText = "German";}, 1000);
+        });
     }
 }
 
@@ -98,5 +111,8 @@ document.getElementById("spanish").onchange = function() {
     setLanguage();
 }
 document.getElementById("french").onchange = function() {
+    setLanguage();
+}
+document.getElementById("german").onchange = function() {
     setLanguage();
 }

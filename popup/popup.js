@@ -11,6 +11,7 @@
 // Hide Containers 
 document.getElementById('spanish-container').style.display = "none";
 document.getElementById('french-container').style.display = "none";
+document.getElementById('german-container').style.display = "none";
 document.getElementById('language-select-prompt').style.display = "none";
 
 // Chrome-Synced Variables
@@ -57,6 +58,11 @@ function useRestoredLanguage(languageRestored) {
         frenchScript.src = 'language/french.js';
         document.getElementById('scripts').appendChild(frenchScript);
         document.getElementById('french-container').style.display = "block";
+    } else if (languageRestored == 'german') {
+        var germanScript = document.createElement('script');
+        germanScript.src = 'language/german.js';
+        document.getElementById('scripts').appendChild(germanScript);
+        document.getElementById('german-container').style.display = "block";
     }
 }
 

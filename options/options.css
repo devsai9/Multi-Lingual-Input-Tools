@@ -12,6 +12,29 @@
     text-align: center;
 }
 
+.input-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    position: relative;
+}
+
+#color-mode-label {
+    border-radius: 500%;
+}
+
+#spanish-label {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#german-label {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .bi-brightness-high-fill {
     font-size: 23px;
 }

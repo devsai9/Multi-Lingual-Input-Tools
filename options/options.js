@@ -28,15 +28,16 @@ function getChromeVars() {
 function actColorMode(colorModeRestored) {
     if (colorModeRestored == "light") {
         document.getElementById("color-mode-checkbox").checked = false;
+        document.getElementById("color-mode-label").setAttribute("title", "Light Mode");
+        // document.getElementById("color-mode-label").innerText = "Light Mode";
         document.getElementById("mode-icon").classList.add("bi");
         document.getElementById("mode-icon").classList.add("bi-brightness-high-fill");
-        //document.getElementById("color-mode-label").innerText = "Light Mode";
         document.getElementsByTagName("body")[0].setAttribute('data-theme', 'light');
     } else if (colorModeRestored == "dark") {
         document.getElementById("color-mode-checkbox").checked = true;
+        // document.getElementById("color-mode-label").innerText = "Dark Mode";
         document.getElementById("mode-icon").classList.add("bi");
         document.getElementById("mode-icon").classList.add("bi-moon-fill");
-        //document.getElementById("color-mode-label").innerText = "Dark Mode";
         document.getElementsByTagName("body")[0].setAttribute('data-theme', 'dark');
     }
 }
@@ -56,19 +57,19 @@ function actLanguage(languageRestored) {
 // Set the Color Mode
 function setColorMode() {
     if (document.getElementById("color-mode-checkbox").checked == false) {
-        document.getElementById("color-mode-label").innerText = "Syncing...";
+        document.getElementById("color-mode-label").innerText = "...";
         chrome.storage.sync.set({
             colorMode: 'light'
         }, function () {
-            setTimeout(function() {document.getElementById("color-mode-label").innerText = "Light Mode";}, 1000);
+            // setTimeout(function() {document.getElementById("color-mode-label").innerText = "Reloading...";}, 1000);
             setTimeout(function() {location.reload();}, 1300)
         });
     } else if (document.getElementById("color-mode-checkbox").checked == true) {
-        document.getElementById("color-mode-label").innerText = "Syncing...";
+        document.getElementById("color-mode-label").innerText = "...";
         chrome.storage.sync.set({
             colorMode: 'dark'
         }, function () {
-            setTimeout(function() {document.getElementById("color-mode-label").innerText = "Dark Mode";}, 1000);
+            // setTimeout(function() {document.getElementById("color-mode-label").innerText = "Reloading...";}, 1000);
             setTimeout(function() {location.reload();}, 1300)
         });
     }
@@ -82,21 +83,21 @@ function setLanguage() {
             language: 'spanish'
         }, function () {
             document.getElementById("spanish-label").innerText = "Syncing...";
-            setTimeout(function() {document.getElementById("spanish-label").innerText = "Spanish";}, 1000);
+            setTimeout(function() {document.getElementById("spanish-label").innerText = "Spanish 🇪🇸";}, 1000);
         });
     } else if (document.getElementById("french").checked == true) {
         document.getElementById("french-label").innerText = "Syncing...";
         chrome.storage.sync.set({
             language: 'french'
         }, function () {
-            setTimeout(function() {document.getElementById("french-label").innerText = "French";}, 1000);
+            setTimeout(function() {document.getElementById("french-label").innerText = "French 🇫🇷";}, 1000);
         });
     } else if (document.getElementById("german").checked == true) {
         document.getElementById("german-label").innerText = "Syncing...";
         chrome.storage.sync.set({
             language: 'german'
         }, function () {
-            setTimeout(function() {document.getElementById("german-label").innerText = "German";}, 1000);
+            setTimeout(function() {document.getElementById("german-label").innerText = "German 🇩🇪";}, 1000);
         });
     }
 }

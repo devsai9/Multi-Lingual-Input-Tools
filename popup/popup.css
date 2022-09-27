@@ -21,7 +21,6 @@
 
 .menu-icons {
     float: right;
-    /* margin-top: -20px; */
     margin-right: 10px;
     font-size: 20px;
 }
@@ -33,7 +32,3 @@
 .menu-icons > .bi-keyboard {
     font-size: 25px;
 }
-
-/* .title {
-    margin-left: 55px;
-} */

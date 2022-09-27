@@ -10,16 +10,16 @@
 
 /* Defining Variables */
 // Elements on page
-var uppercaseCheckbox = document.getElementById('spanish-uppercase');
+const uppercaseCheckbox = document.getElementById('spanish-uppercase');
 var uppercase = document.getElementById('spanish-uppercase').checked;
-var question_mark = document.getElementById('spanish-upsidedown-questionmark');
-var exclamation_point = document.getElementById('spanish-upsidedown-exclamationmark');
-var accent_a = document.getElementById('spanish-accent-a');
-var accent_e = document.getElementById('spanish-accent-e');
-var accent_i = document.getElementById('spanish-accent-i');
-var accent_n = document.getElementById('spanish-accent-n');
-var accent_o = document.getElementById('spanish-accent-o');
-var accent_u = document.getElementById('spanish-accent-u');
+const question_mark = document.getElementById('spanish-upsidedown-questionmark');
+const exclamation_point = document.getElementById('spanish-upsidedown-exclamationmark');
+const accent_a = document.getElementById('spanish-accent-a');
+const accent_e = document.getElementById('spanish-accent-e');
+const accent_i = document.getElementById('spanish-accent-i');
+const accent_n = document.getElementById('spanish-accent-n');
+const accent_o = document.getElementById('spanish-accent-o');
+const accent_u = document.getElementById('spanish-accent-u');
 
 // All Accented Non-English Keyboard Letters (From Spanish)
 accentedLetters = {

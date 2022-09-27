@@ -9,22 +9,22 @@
 */
 
 // Elements on page
-var uppercaseCheckbox = document.getElementById('french-uppercase');
+const uppercaseCheckbox = document.getElementById('french-uppercase');
 var uppercase = document.getElementById('french-uppercase').checked;
-var accent_a_backward = document.getElementById('french-accent-a-backward');
-var accent_a_hat = document.getElementById('french-accent-a-hat');
-var combined_ae = document.getElementById('french-combined-ae');
-var accent_c = document.getElementById('french-accent-c');
-var accent_e = document.getElementById('french-accent-e');
-var accent_e_backward = document.getElementById('french-accent-e-backward');
-var accent_e_hat = document.getElementById('french-accent-e-hat');
-var accent_e_doubledot = document.getElementById('french-accent-e-doubledot');
-var accent_i_doubledot = document.getElementById('french-accent-i-doubledot');
-var accent_i_hat = document.getElementById('french-accent-i-hat');
-var accent_o_hat = document.getElementById('french-accent-o-hat');
-var combined_oe = document.getElementById('french-combined-oe');
+const accent_a_backward = document.getElementById('french-accent-a-backward');
+const accent_a_hat = document.getElementById('french-accent-a-hat');
+const combined_ae = document.getElementById('french-combined-ae');
+const accent_c = document.getElementById('french-accent-c');
+const accent_e = document.getElementById('french-accent-e');
+const accent_e_backward = document.getElementById('french-accent-e-backward');
+const accent_e_hat = document.getElementById('french-accent-e-hat');
+const accent_e_doubledot = document.getElementById('french-accent-e-doubledot');
+const accent_i_doubledot = document.getElementById('french-accent-i-doubledot');
+const accent_i_hat = document.getElementById('french-accent-i-hat');
+const accent_o_hat = document.getElementById('french-accent-o-hat');
+const combined_oe = document.getElementById('french-combined-oe');
 
-// All Accented Non-English Keyboard Letters (From Spanish)
+// All Accented Non-English Keyboard Letters (From French)
 accentedLetters = {
     a_backward: "à",
     A_BACKWARD: "À",

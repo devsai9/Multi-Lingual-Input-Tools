@@ -10,12 +10,12 @@
 
 /* Defining Variables */
 // Elements on page
-var uppercaseCheckbox = document.getElementById('german-uppercase');
+const uppercaseCheckbox = document.getElementById('german-uppercase');
 var uppercase = document.getElementById('german-uppercase').checked;
-var accent_a_doubledot = document.getElementById('german-accent-a-doubledot');
-var accent_o_doubledot = document.getElementById('german-accent-o-doubledot');
-var accent_u_doubledot = document.getElementById('german-accent-u-doubledot');
-var beta = document.getElementById('german-beta');
+const accent_a_doubledot = document.getElementById('german-accent-a-doubledot');
+const accent_o_doubledot = document.getElementById('german-accent-o-doubledot');
+const accent_u_doubledot = document.getElementById('german-accent-u-doubledot');
+const beta = document.getElementById('german-beta');
 
 // All Accented Non-English Keyboard Letters (From German)
 accentedLetters = {

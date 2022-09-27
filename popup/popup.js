@@ -66,8 +66,8 @@ function useRestoredLanguage(languageRestored) {
     }
 }
 
-// On Click Listeners in Menu
-document.getElementById('settings-icon').onclick = function() {
+// On Click Listener for Prompt
+document.getElementById('prompt-options-page').onclick = function() {
     if (chrome.runtime.openOptionsPage) {
         chrome.runtime.openOptionsPage();
     } else {
@@ -75,12 +75,16 @@ document.getElementById('settings-icon').onclick = function() {
     }
 }
 
+// On Click Listeners in Menu
 document.getElementById('about-icon').onclick = function() {
     window.open(chrome.runtime.getURL('/about/about.html'));
 }
 
-// On Click Listener for Prompt
-document.getElementById('prompt-options-page').onclick = function() {
+document.getElementById('fta-icon').onclick = function() {
+    window.open(chrome.runtime.getURL('/fta/fta.html'));
+}
+
+document.getElementById('settings-icon').onclick = function() {
     if (chrome.runtime.openOptionsPage) {
         chrome.runtime.openOptionsPage();
     } else {

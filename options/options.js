@@ -20,12 +20,12 @@ function getChromeVars() {
         colorModeRestored = item.colorMode;
         languageRestored = item.language;
     });
-    setTimeout(function() {actColorMode(colorModeRestored);}, 300);
-    setTimeout(function() {actLanguage(languageRestored);}, 300);
+    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 300);
+    setTimeout(function() {useRestoredLanguage(languageRestored);}, 300);
 }
 
 // Use the Chrome colorMode (Color Mode) variable
-function actColorMode(colorModeRestored) {
+function useRestoredColorMode(colorModeRestored) {
     if (colorModeRestored == "light") {
         document.getElementById("color-mode-checkbox").checked = false;
         document.getElementById("color-mode-label").setAttribute("title", "Light Mode");
@@ -43,7 +43,7 @@ function actColorMode(colorModeRestored) {
 }
 
 // Use the Chrome language (Language) variable
-function actLanguage(languageRestored) {
+function useRestoredLanguage(languageRestored) {
     if (languageRestored == 'spanish') {
         document.getElementById('spanish').checked = true;
     } else if (languageRestored == 'french') {

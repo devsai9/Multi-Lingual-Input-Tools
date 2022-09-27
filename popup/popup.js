@@ -67,7 +67,28 @@ function useRestoredLanguage(languageRestored) {
 }
 
 // On Click Listener for Prompt
-document.getElementById('prompt-options-page').onclick = function() {
+document.getElementById('prompt-options-page-en').onclick = function() {
+    if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('/options/options.html'));
+    }
+}
+document.getElementById('prompt-options-page-es').onclick = function() {
+    if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('/options/options.html'));
+    }
+}
+document.getElementById('prompt-options-page-fr').onclick = function() {
+    if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('/options/options.html'));
+    }
+}
+document.getElementById('prompt-options-page-de').onclick = function() {
     if (chrome.runtime.openOptionsPage) {
         chrome.runtime.openOptionsPage();
     } else {

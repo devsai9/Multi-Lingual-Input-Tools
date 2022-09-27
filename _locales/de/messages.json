@@ -1,0 +1,10 @@
+{
+    "appName": {
+      "message": "Mehrsprachige Eingabewerkzeuge",
+      "description": "Der Name der Erweiterung."
+    },
+    "appDesc": {
+      "message": "Kopieren Sie akzentuierte Buchstaben und Symbole aus einer Vielzahl von Sprachen und fügen Sie sie schnell ein!",
+      "description": "Die Beschreibung der Erweiterung."
+    }
+  }

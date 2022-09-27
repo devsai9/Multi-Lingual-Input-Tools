@@ -1,0 +1,10 @@
+{
+    "appName": {
+      "message": "Herramientas de entrada multilingües",
+      "description": "Nombre de la extensión."
+    },
+    "appDesc": {
+      "message": "¡Copie y pegue rápidamente letras y símbolos acentuados de una variedad de idiomas!",
+      "description": "Descripción de la extensión."
+    }
+  }

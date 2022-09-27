@@ -1,0 +1,10 @@
+{
+    "appName": {
+      "message": "Outils de saisie multilingues",
+      "description": "Nom de l'extension."
+    },
+    "appDesc": {
+      "message": "Copiez et collez rapidement des lettres accentuées et des symboles à partir d'une variété de langues!",
+      "description": "La description de l'extension."
+    }
+  }

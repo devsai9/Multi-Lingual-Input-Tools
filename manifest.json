@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Multi-Lingual Input Tools",
-    "description": "Quickly copy & paste Spanish & French accented letters and symbols!",
-    "version": "5.1",
+    "description": "Quickly copy & paste accented letters and symbols from multiple different languages!",
+    "version": "6.1",
     "icons": {
         "16": "icons/16.png",
         "48": "icons/48.png",
@@ -10,7 +10,7 @@
     },
     "action": {
         "default_popup": "popup/popup.html",
-        "default_title": "Spanish Input Tools",
+        "default_title": "Multi-Lingual Input Tools",
         "default_icon": {
             "16": "icons/16.png",
             "48": "icons/48.png",

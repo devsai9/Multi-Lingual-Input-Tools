@@ -4,6 +4,12 @@
 ### Installation:
 🛒 It is currently avaliable on the [Chrome Webstore](https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en) and [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl)
 
+# Privacy Policy:
+Privacy is an upmost importance to us. Please read the [Privacy Policy](PRIVACY.md).
+
+# Contribute:
+Coming Soon
+
 # Setup After Installation
 After installing the extension and launching the popup. You will be prompted to select a language from settings/options. The color mode is by default set to dark, but can be changed to light. <br><br>
 Prompt Mentioned above:<br>
@@ -19,12 +25,6 @@ Here you can switch the light/dark mode setting: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/options_color-mode.png" width=300 /> <br>
 And the Selected Language: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/options_language.png" width=300 /> <br>
-
-# Contribute:
-Coming Soon
-
-# Privacy Policy:
-Privacy is an upmost importance to us. Please read the [Privacy Policy](PRIVACY.md).
 
 # Contact: 
 Coming Soon

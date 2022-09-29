@@ -26,5 +26,5 @@ Here you can switch the light/dark mode setting: <br>
 And the Selected Language: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/options_language.png" width=300 /> <br>
 
-# Contact: 
-Coming Soon
+# Contact & Support: 
+Discord Server Coming Soon

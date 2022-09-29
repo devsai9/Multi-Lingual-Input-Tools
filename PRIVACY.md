@@ -24,6 +24,3 @@ This extension does NOT track or profile users in anyway.
 ## Advertisements
 This extension does NOT display advertisements.<br>
 This extension does NOT target users in anyway.
-
-## Contact
-Coming Soon

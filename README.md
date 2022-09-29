@@ -4,14 +4,12 @@
 ### Installation:
 🛒 It is currently avaliable on the [Chrome Webstore](https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en) and [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl)
 
-# How to use:
-
-### After Installation
+# Setup After Installation
 After installing the extension and launching the popup. You will be prompted to select a language from settings/options. The color mode is by default set to dark, but can be changed to light. <br><br>
 Prompt Mentioned above:<br>
 <img src="extension/assets/en/screenshots/v6.2/raw/popup_prompt.png" width=500 />
 
-To get to settings go to the menu in the top right corner of the popup: <br>
+To get to settings at any time by going to the menu in the top right corner of the popup: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/popup_menu.png" width=300 /> <br>
 and click the gear icon: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/popup_menu_settings-icon.png" width=200 /> <br>

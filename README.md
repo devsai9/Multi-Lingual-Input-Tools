@@ -27,4 +27,5 @@ And the Selected Language: <br>
 <img src="extension/assets/en/screenshots/v6.2/raw/options_language.png" width=300 /> <br>
 
 # Contact & Support: 
-Discord Server Coming Soon
+[Support Discord Server](https://discord.gg/Kz4WVK9qP4)
+

@@ -13,18 +13,18 @@ Coming Soon
 # Setup After Installation
 After installing the extension and launching the popup. You will be prompted to select a language from settings/options. The color mode is by default set to dark, but can be changed to light. <br><br>
 Prompt Mentioned above:<br>
-<img src="extension/assets/en/screenshots/v6.2/raw/popup_prompt.png" width=500 />
+<img src="extension/assets/en/screenshots/v6.5/raw/popup_prompt.png" width=500 />
 
 To get to settings at any time by going to the menu in the top right corner of the popup: <br>
-<img src="extension/assets/en/screenshots/v6.2/raw/popup_menu.png" width=300 /> <br>
+<img src="extension/assets/en/screenshots/v6.5/raw/popup_menu.png" width=300 /> <br>
 and click the gear icon: <br>
-<img src="extension/assets/en/screenshots/v6.2/raw/popup_menu_settings-icon.png" width=200 /> <br>
+<img src="extension/assets/en/screenshots/v6.5/raw/popup_menu_settings-icon.png" width=200 /> <br>
 After that you will be on a page that is similar to the image below: <br>
-<img src="extension/assets/en/screenshots/v6.2/raw/options.png" width=500 /> <br>
+<img src="extension/assets/en/screenshots/v6.5/raw/options.png" width=500 /> <br>
 Here you can switch the light/dark mode setting: <br>
-<img src="extension/assets/en/screenshots/v6.2/raw/options_color-mode.png" width=300 /> <br>
+<img src="extension/assets/en/screenshots/v6.5/raw/options_color-mode.png" width=300 /> <br>
 And the Selected Language: <br>
-<img src="extension/assets/en/screenshots/v6.2/raw/options_language.png" width=300 /> <br>
+<img src="extension/assets/en/screenshots/v6.5/raw/options_language.png" width=300 /> <br>
 
 # Contact & Support: 
 [Support Discord Server](https://discord.gg/Kz4WVK9qP4)

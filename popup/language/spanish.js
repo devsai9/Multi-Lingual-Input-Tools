@@ -20,6 +20,7 @@ const accent_i = document.getElementById('spanish-accent-i');
 const accent_n = document.getElementById('spanish-accent-n');
 const accent_o = document.getElementById('spanish-accent-o');
 const accent_u = document.getElementById('spanish-accent-u');
+const accent_u_doubledot = document.getElementById('spanish-accent-u-doubledot');
 
 // All Accented Non-English Keyboard Letters (From Spanish)
 accentedLetters = {
@@ -36,7 +37,9 @@ accentedLetters = {
     o: "ó",
     O: "Ó",
     u: "ú",
-    U: "Ú"
+    U: "Ú",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü"
 }
 
 /* Extension Core Function (Spanish) */
@@ -50,6 +53,7 @@ function changeButtonTextCase() {
         accent_n.textContent = accentedLetters.n;
         accent_o.textContent = accentedLetters.o;
         accent_u.textContent = accentedLetters.u;
+        accent_u_doubledot.textContent = accentedLetters.u_doubledot;
     } else if (uppercase) {
         accent_a.textContent = accentedLetters.A;
         accent_e.textContent = accentedLetters.E;
@@ -57,6 +61,7 @@ function changeButtonTextCase() {
         accent_n.textContent = accentedLetters.N;
         accent_o.textContent = accentedLetters.O;
         accent_u.textContent = accentedLetters.U;
+        accent_u_doubledot.textContent = accentedLetters.U_DOUBLEDOT;
     }
 }
 
@@ -175,6 +180,23 @@ accent_u.onclick = function() {
             accent_u.textContent = "Copied";
             setTimeout(function() {
                 accent_u.textContent = accentedLetters.U;
+            }, 1000);
+        });
+    }
+}
+accent_u_doubledot.onclick = function() {
+    if (!uppercase) {
+        navigator.clipboard.writeText(accentedLetters.u_doubledot).then(function() {
+            accent_u_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_doubledot.textContent = accentedLetters.u_doubledot;
+            }, 1000);
+        });
+    } else if (uppercase) {
+        navigator.clipboard.writeText(accentedLetters.U_DOUBLEDOT).then(function() {
+            accent_u_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_doubledot.textContent = accentedLetters.U_DOUBLEDOT;
             }, 1000);
         });
     }

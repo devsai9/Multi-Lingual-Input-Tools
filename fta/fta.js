@@ -49,7 +49,7 @@ function getChromeVars() {
         languageRestored = item.language;
     });
     // Call functions to use the Chrome Variables
-    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 0001);
+    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 0250);
     setTimeout(function() {useRestoredLanguage(languageRestored);}, 0100);
 }
 
@@ -96,6 +96,7 @@ const spanish_accent_i = document.getElementById('spanish-accent-i');
 const spanish_accent_n = document.getElementById('spanish-accent-n');
 const spanish_accent_o = document.getElementById('spanish-accent-o');
 const spanish_accent_u = document.getElementById('spanish-accent-u');
+const spanish_accent_u_doubledot = document.getElementById('spanish-accent-u-doubledot');
 // All Accented Non-English Keyboard Letters (From Spanish)
 spanishAccentedLetters = {
     question_mark: "¿",
@@ -111,7 +112,9 @@ spanishAccentedLetters = {
     o: "ó",
     O: "Ó",
     u: "ú",
-    U: "Ú"
+    U: "Ú",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü"
 }
 
 // On Click Listeners
@@ -177,6 +180,15 @@ spanish_accent_u.onclick = function() {
         typingArea.focus();
     }
 }
+spanish_accent_u_doubledot.onclick = function() {
+    if (!spanish_uppercase) {
+        typingArea.value += spanishAccentedLetters.u_doubledot;
+        typingArea.focus();
+    } else if (spanish_uppercase) {
+        typingArea.value += spanishAccentedLetters.U_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
 
 // Change Text of buttons
 function spanish_changeButtonTextCase() {
@@ -187,6 +199,7 @@ function spanish_changeButtonTextCase() {
         spanish_accent_n.textContent = spanishAccentedLetters.n;
         spanish_accent_o.textContent = spanishAccentedLetters.o;
         spanish_accent_u.textContent = spanishAccentedLetters.u;
+        spanish_accent_u_doubledot.textContent = spanishAccentedLetters.u_doubledot;
         spanish_uppercase = false;
     } else if (spanish_uppercaseCheckbox.checked) {
         spanish_accent_a.textContent = spanishAccentedLetters.A;
@@ -195,6 +208,7 @@ function spanish_changeButtonTextCase() {
         spanish_accent_n.textContent = spanishAccentedLetters.N;
         spanish_accent_o.textContent = spanishAccentedLetters.O;
         spanish_accent_u.textContent = spanishAccentedLetters.U;
+        spanish_accent_u_doubledot.textContent = spanishAccentedLetters.U_DOUBLEDOT;
         spanish_uppercase = true;
     }
 }

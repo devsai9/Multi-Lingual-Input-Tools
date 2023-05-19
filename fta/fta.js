@@ -112,6 +112,35 @@ germanAccentedLetters = {
     BETA: "ẞ"
 }
 
+/* Romanian */
+const romanianContainer = document.getElementById('romanian-container');
+const romanian_uppercaseCheckbox = document.getElementById('romanian-uppercase');
+var romanian_uppercase = document.getElementById('romanian-uppercase').checked;
+const romanian_accent_a_slur = document.getElementById('romanian-accent-a-slur');
+const romanian_accent_a_hat = document.getElementById('romanian-accent-a-hat');
+const romanian_accent_i_hat = document.getElementById('romanian-accent-i-hat');
+const romanian_accent_s_long = document.getElementById('romanian-accent-s-long');
+const romanian_accent_s_short = document.getElementById('romanian-accent-s-short');
+const romanian_accent_t_long = document.getElementById('romanian-accent-t-long');
+const romanian_accent_t_short = document.getElementById('romanian-accent-t-short');
+// All Accented Non-English Keyboard Letters (From romanian)
+romanianAccentedLetters = {
+    a_slur: "ă",
+    A_SLUR: "Ă",
+    a_hat: "â",
+    A_HAT: "Â",
+    i_hat: "î",
+    I_HAT: "Î",
+    s_long: "ș",
+    S_LONG: "Ș",
+    s_short: "ş",
+    S_SHORT: "Ş",
+    t_long: "ț",
+    T_LONG: "Ț",
+    t_short: "ţ",
+    T_SHORT: "Ţ",
+}
+
 /* -----------------------
 |  CORE FUNCTIONALITIES  |
 ----------------------- */
@@ -119,6 +148,7 @@ germanAccentedLetters = {
 spanishContainer.style.display = "none";
 frenchContainer.style.display = "none";
 germanContainer.style.display = "none";
+romanianContainer.style.display = "none";
 langPromptContainer.style.display = "none";
 
 /* Load Chrome Vars */
@@ -160,6 +190,8 @@ function useRestoredLanguage(languageRestored) {
         frenchContainer.style.display = "block";
     } else if (languageRestored == 'german') {
         germanContainer.style.display = "block";
+    } else if (languageRestored == 'romanian') {
+        romanianContainer.style.display = "block";
     }
 }
 
@@ -511,5 +543,122 @@ document.addEventListener("keydown", function (event) {
             german_uppercase = false;
         }
         german_changeButtonTextCase();
+    }
+});
+
+/* -----------
+|  Romanian  |
+----------- */
+setTimeout(function() {
+    if (romanianContainer.style.display == 'block') {
+        document.getElementById("romanian-input-buttons").style.fontFamily = "sans-serif";
+        typingArea.style.fontFamily = "sans-serif";
+        typingArea.style.fontWeight = "bold";
+    }
+}, 0250);
+
+// Onclick Listeners
+romanian_accent_a_slur.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.a_slur;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.A_SLUR;
+        typingArea.focus();
+    }
+}
+romanian_accent_a_hat.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.a_hat;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.A_HAT;
+        typingArea.focus();
+    }
+}
+romanian_accent_i_hat.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.i_hat;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.I_HAT;
+        typingArea.focus();
+    }
+}
+romanian_accent_s_long.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.s_long;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.S_LONG;
+        typingArea.focus();
+    }
+}
+romanian_accent_s_short.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.s_short;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.S_SHORT;
+        typingArea.focus();
+    }
+}
+romanian_accent_t_long.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.t_long;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.T_LONG;
+        typingArea.focus();
+    }
+}
+romanian_accent_t_short.onclick = function() {
+    if (!romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.t_short;
+        typingArea.focus();
+    } else if (romanian_uppercase) {
+        typingArea.value += romanianAccentedLetters.T_SHORT;
+        typingArea.focus();
+    }
+}
+
+// Change Text of buttons
+function romanian_changeButtonTextCase() {
+    if (!romanian_uppercaseCheckbox.checked) {
+        romanian_accent_a_slur.textContent = romanianAccentedLetters.a_slur;
+        romanian_accent_a_hat.textContent = romanianAccentedLetters.a_hat;
+        romanian_accent_i_hat.textContent = romanianAccentedLetters.i_hat;
+        romanian_accent_s_long.textContent = romanianAccentedLetters.s_long;
+        romanian_accent_s_short.textContent = romanianAccentedLetters.s_short;
+        romanian_accent_t_long.textContent = romanianAccentedLetters.t_long;
+        romanian_accent_t_short.textContent = romanianAccentedLetters.t_short;
+        romanian_uppercase = false;
+    } else if (romanian_uppercaseCheckbox.checked) {
+        romanian_accent_a_slur.textContent = romanianAccentedLetters.A_SLUR;
+        romanian_accent_a_hat.textContent = romanianAccentedLetters.A_HAT;
+        romanian_accent_i_hat.textContent = romanianAccentedLetters.I_HAT;
+        romanian_accent_s_long.textContent = romanianAccentedLetters.S_LONG;
+        romanian_accent_s_short.textContent = romanianAccentedLetters.S_SHORT;
+        romanian_accent_t_long.textContent = romanianAccentedLetters.T_LONG;
+        romanian_accent_t_short.textContent = romanianAccentedLetters.T_SHORT;
+        romanian_uppercase = true;
+    }
+}
+// On Change Listener for when the user wants lowercase or uppercase letters
+romanian_uppercaseCheckbox.onchange = function() {
+    romanian_changeButtonTextCase();
+}
+
+// Using Shift to toggle lowercase and uppercase
+document.addEventListener("keydown", function (event) {
+    if (event.key == "Shift") {
+        if (!romanian_uppercase) {
+            romanian_uppercaseCheckbox.checked = true;
+            romanian_uppercase = true;
+        } else if (romanian_uppercase) {
+            romanian_uppercaseCheckbox.checked = false;
+            romanian_uppercase = false;
+        }
+        romanian_changeButtonTextCase();
     }
 });

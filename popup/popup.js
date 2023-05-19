@@ -12,6 +12,7 @@
 document.getElementById('spanish-container').style.display = "none";
 document.getElementById('french-container').style.display = "none";
 document.getElementById('german-container').style.display = "none";
+document.getElementById('romanian-container').style.display = "none";
 document.getElementById('language-select-prompt').style.display = "none";
 
 // Chrome-Synced Variables
@@ -46,7 +47,7 @@ function useRestoredColorMode(colorModeRestored) {
 
 // Use the Chrome "language" (Language) variable
 function useRestoredLanguage(languageRestored) {
-    if (languageRestored == 'prompt') {
+    if (languageRestored == 'prompt' || languageRestored == null) {
         document.getElementById('language-select-prompt').style.display = "block";
     } else if (languageRestored == 'spanish') {
         var spanishScript = document.createElement('script');
@@ -63,6 +64,11 @@ function useRestoredLanguage(languageRestored) {
         germanScript.src = 'language/german.js';
         document.getElementById('scripts').appendChild(germanScript);
         document.getElementById('german-container').style.display = "block";
+    } else if (languageRestored == 'romanian') {
+        var romanianScript = document.createElement('script');
+        romanianScript.src = 'language/romanian.js';
+        document.getElementById('scripts').appendChild(romanianScript);
+        document.getElementById('romanian-container').style.display = "block";
     }
 }
 
@@ -74,27 +80,34 @@ document.getElementById('prompt-options-page-en').onclick = function() {
         window.open(chrome.runtime.getURL('/options/options.html'));
     }
 }
-document.getElementById('prompt-options-page-es').onclick = function() {
-    if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-    } else {
-        window.open(chrome.runtime.getURL('/options/options.html'));
-    }
-}
-document.getElementById('prompt-options-page-fr').onclick = function() {
-    if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-    } else {
-        window.open(chrome.runtime.getURL('/options/options.html'));
-    }
-}
-document.getElementById('prompt-options-page-de').onclick = function() {
-    if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-    } else {
-        window.open(chrome.runtime.getURL('/options/options.html'));
-    }
-}
+// document.getElementById('prompt-options-page-es').onclick = function() {
+//     if (chrome.runtime.openOptionsPage) {
+//         chrome.runtime.openOptionsPage();
+//     } else {
+//         window.open(chrome.runtime.getURL('/options/options.html'));
+//     }
+// }
+// document.getElementById('prompt-options-page-fr').onclick = function() {
+//     if (chrome.runtime.openOptionsPage) {
+//         chrome.runtime.openOptionsPage();
+//     } else {
+//         window.open(chrome.runtime.getURL('/options/options.html'));
+//     }
+// }
+// document.getElementById('prompt-options-page-de').onclick = function() {
+//     if (chrome.runtime.openOptionsPage) {
+//         chrome.runtime.openOptionsPage();
+//     } else {
+//         window.open(chrome.runtime.getURL('/options/options.html'));
+//     }
+// }
+// document.getElementById('prompt-options-page-ro').onclick = function() {
+//     if (chrome.runtime.openOptionsPage) {
+//         chrome.runtime.openOptionsPage();
+//     } else {
+//         window.open(chrome.runtime.getURL('/options/options.html'));
+//     }
+// }
 
 // On Click Listeners in Menu
 document.getElementById('about-icon').onclick = function() {

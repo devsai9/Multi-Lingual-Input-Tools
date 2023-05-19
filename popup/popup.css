@@ -22,7 +22,7 @@
     min-width: 550px;
 }
 
-#prompt-options-page-en, #prompt-options-page-es, #prompt-options-page-fr, #prompt-options-page-de {
+#prompt-options-page-en, #prompt-options-page-es, #prompt-options-page-fr, #prompt-options-page-de, #prompt-options-page-ro {
     text-decoration: underline;
     cursor: pointer;
 }

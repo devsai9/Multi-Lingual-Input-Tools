@@ -50,6 +50,10 @@ function useRestoredLanguage(languageRestored) {
         document.getElementById('french').checked = true;
     } else if (languageRestored == 'german') {
         document.getElementById('german').checked = true;
+    } else if (languageRestored == 'romanian') {
+        document.getElementById('romanian').checked = true;
+    } else if (languageRestored == 'dutch') {
+        document.getElementById('dutch').checked = true;
     }
 }
 
@@ -99,7 +103,21 @@ function setLanguage() {
         }, function () {
             setTimeout(function() {document.getElementById("german-label").innerText = "German 🇩🇪";}, 1000);
         });
-    }
+    } else if (document.getElementById("romanian").checked == true) {
+        document.getElementById("romanian-label").innerText = "Syncing...";
+        chrome.storage.sync.set({
+            language: 'romanian'
+        }, function () {
+            setTimeout(function() {document.getElementById("romanian-label").innerText = "Romanian 🇷🇴";}, 1000);
+        });
+    } else if (document.getElementById("dutch").checked == true) {
+        document.getElementById("dutch-label").innerText = "Syncing...";
+        chrome.storage.sync.set({
+            language: 'dutch'
+        }, function () {
+            setTimeout(function() {document.getElementById("dutch-label").innerText = "Dutch 🇳🇱";}, 1000);
+        });
+    } 
 }
 
 /* Event listeners */
@@ -115,5 +133,11 @@ document.getElementById("french").onchange = function() {
     setLanguage();
 }
 document.getElementById("german").onchange = function() {
+    setLanguage();
+}
+document.getElementById("romanian").onchange = function() {
+    setLanguage();
+}
+document.getElementById("dutch").onchange = function() {
     setLanguage();
 }

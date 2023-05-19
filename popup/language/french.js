@@ -23,6 +23,10 @@ const accent_i_doubledot = document.getElementById('french-accent-i-doubledot');
 const accent_i_hat = document.getElementById('french-accent-i-hat');
 const accent_o_hat = document.getElementById('french-accent-o-hat');
 const combined_oe = document.getElementById('french-combined-oe');
+const accent_u_backward = document.getElementById('french-accent-u-backward');
+const accent_u_hat = document.getElementById('french-accent-u-hat');
+const accent_u_doubledot = document.getElementById('french-accent-u-doubledot');
+const accent_y_doubledot = document.getElementById('french-accent-y-doubledot');
 
 // All Accented Non-English Keyboard Letters (From French)
 accentedLetters = {
@@ -49,7 +53,15 @@ accentedLetters = {
     o_hat: "ô",
     O_HAT: "Ô",
     oe: "œ",
-    OE: "Œ"
+    OE: "Œ",
+    u_backward: "ù",
+    U_BACKWARD: "Ù",
+    u_hat: "û",
+    U_HAT: "Û",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü",
+    y_doubledot: "ÿ",
+    Y_DOUBLEDOT: "Ÿ"
 }
 
 /* Extension Core Function (French) */
@@ -69,6 +81,10 @@ function changeButtonTextCase() {
         accent_i_hat.textContent = accentedLetters.i_hat;
         accent_o_hat.textContent = accentedLetters.o_hat;
         combined_oe.textContent = accentedLetters.oe;
+        accent_u_backward.textContent = accentedLetters.u_backward;
+        accent_u_hat.textContent = accentedLetters.u_hat;
+        accent_u_doubledot.textContent = accentedLetters.u_doubledot;
+        accent_y_doubledot.textContent = accentedLetters.y_doubledot;
     } else if (uppercase) {
         accent_a_backward.textContent = accentedLetters.A_BACKWARD;
         accent_a_hat.textContent = accentedLetters.A_HAT;
@@ -82,6 +98,10 @@ function changeButtonTextCase() {
         accent_i_hat.textContent = accentedLetters.I_HAT;
         accent_o_hat.textContent = accentedLetters.O_HAT;
         combined_oe.textContent = accentedLetters.OE;
+        accent_u_backward.textContent = accentedLetters.U_BACKWARD;
+        accent_u_hat.textContent = accentedLetters.U_HAT;
+        accent_u_doubledot.textContent = accentedLetters.U_DOUBLEDOT;
+        accent_y_doubledot.textContent = accentedLetters.Y_DOUBLEDOT;
     }
 }
 
@@ -286,6 +306,74 @@ combined_oe.onclick = function() {
             combined_oe.textContent = "Copied";
             setTimeout(function() {
                 combined_oe.textContent = accentedLetters.OE;
+            }, 1000);
+        });
+    }
+}
+accent_u_backward.onclick = function() {
+    if (!uppercase) {
+        navigator.clipboard.writeText(accentedLetters.u_backward).then(function() {
+            accent_u_backward.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_backward.textContent = accentedLetters.u_backward;
+            }, 1000);
+        });
+    } else if (uppercase) {
+        navigator.clipboard.writeText(accentedLetters.U_BACKWARD).then(function() {
+            accent_u_backward.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_backward.textContent = accentedLetters.U_BACKWARD;
+            }, 1000);
+        });
+    }
+}
+accent_u_hat.onclick = function() {
+    if (!uppercase) {
+        navigator.clipboard.writeText(accentedLetters.u_hat).then(function() {
+            accent_u_hat.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_hat.textContent = accentedLetters.u_hat;
+            }, 1000);
+        });
+    } else if (uppercase) {
+        navigator.clipboard.writeText(accentedLetters.U_HAT).then(function() {
+            accent_u_hat.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_hat.textContent = accentedLetters.U_HAT;
+            }, 1000);
+        });
+    }
+}
+accent_u_doubledot.onclick = function() {
+    if (!uppercase) {
+        navigator.clipboard.writeText(accentedLetters.u_doubledot).then(function() {
+            accent_u_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_doubledot.textContent = accentedLetters.u_doubledot;
+            }, 1000);
+        });
+    } else if (uppercase) {
+        navigator.clipboard.writeText(accentedLetters.U_DOUBLEDOT).then(function() {
+            accent_u_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_u_doubledot.textContent = accentedLetters.U_DOUBLEDOT;
+            }, 1000);
+        });
+    }
+}
+accent_y_doubledot.onclick = function() {
+    if (!uppercase) {
+        navigator.clipboard.writeText(accentedLetters.y_doubledot).then(function() {
+            accent_y_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_y_doubledot.textContent = accentedLetters.y_doubledot;
+            }, 1000);
+        });
+    } else if (uppercase) {
+        navigator.clipboard.writeText(accentedLetters.Y_DOUBLEDOT).then(function() {
+            accent_y_doubledot.textContent = "Copied";
+            setTimeout(function() {
+                accent_y_doubledot.textContent = accentedLetters.Y_DOUBLEDOT;
             }, 1000);
         });
     }

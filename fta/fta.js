@@ -18,165 +18,18 @@ const typingArea = document.getElementById('textbox');
 const langPromptContainer = document.getElementById('language-select-prompt');
 const langPrompt_options_a = document.getElementById('prompt-options-page');
 
-/* Spanish */
-const spanishContainer = document.getElementById('spanish-container');
-const spanish_uppercaseCheckbox = document.getElementById('spanish-uppercase');
-var spanish_uppercase = document.getElementById('spanish-uppercase').checked;
-const spanish_question_mark = document.getElementById('spanish-upsidedown-questionmark');
-const spanish_exclamation_point = document.getElementById('spanish-upsidedown-exclamationmark');
-const spanish_accent_a = document.getElementById('spanish-accent-a');
-const spanish_accent_e = document.getElementById('spanish-accent-e');
-const spanish_accent_i = document.getElementById('spanish-accent-i');
-const spanish_accent_n = document.getElementById('spanish-accent-n');
-const spanish_accent_o = document.getElementById('spanish-accent-o');
-const spanish_accent_u = document.getElementById('spanish-accent-u');
-// All Accented Non-English Keyboard Letters (From Spanish)
-spanishAccentedLetters = {
-    question_mark: "¿",
-    exclamation_point: "¡",
-    a: "á",
-    A: "Á",
-    e: "é",
-    E: "É",
-    i: "í",
-    I: "Í",
-    n: "ñ",
-    N: "Ñ",
-    o: "ó",
-    O: "Ó",
-    u: "ú",
-    U: "Ú"
-}
-
-/* French */
-const frenchContainer = document.getElementById('french-container');
-const french_uppercaseCheckbox = document.getElementById('french-uppercase');
-var french_uppercase = document.getElementById('french-uppercase').checked;
-const french_accent_a_backward = document.getElementById('french-accent-a-backward');
-const french_accent_a_hat = document.getElementById('french-accent-a-hat');
-const french_combined_ae = document.getElementById('french-combined-ae');
-const french_accent_c = document.getElementById('french-accent-c');
-const french_accent_e = document.getElementById('french-accent-e');
-const french_accent_e_backward = document.getElementById('french-accent-e-backward');
-const french_accent_e_hat = document.getElementById('french-accent-e-hat');
-const french_accent_e_doubledot = document.getElementById('french-accent-e-doubledot');
-const french_accent_i_doubledot = document.getElementById('french-accent-i-doubledot');
-const french_accent_i_hat = document.getElementById('french-accent-i-hat');
-const french_accent_o_hat = document.getElementById('french-accent-o-hat');
-const french_combined_oe = document.getElementById('french-combined-oe');
-// All Accented Non-English Keyboard Letters (From French)
-frenchAccentedLetters = {
-    a_backward: "à",
-    A_BACKWARD: "À",
-    a_hat: "â",
-    A_HAT: "Â",
-    ae: "æ",
-    AE: "Æ",
-    c: "ç",
-    C: "Ç",
-    e: "é",
-    E: "É",
-    e_backward: "è",
-    E_BACKWARD: "È",
-    e_hat: "ê",
-    E_HAT: "Ê",
-    e_doubledot: "ë",
-    E_DOUBLEDOT: "Ë",
-    i_doubledot: "ï",
-    I_DOUBLEDOT: "Ï",
-    i_hat: "î",
-    I_HAT: "Î",
-    o_hat: "ô",
-    O_HAT: "Ô",
-    oe: "œ",
-    OE: "Œ"
-}
-
-/* German */
-const germanContainer = document.getElementById('german-container');
-const german_uppercaseCheckbox = document.getElementById('german-uppercase');
-var german_uppercase = document.getElementById('german-uppercase').checked;
-const german_accent_a_doubledot = document.getElementById('german-accent-a-doubledot');
-const german_accent_o_doubledot = document.getElementById('german-accent-o-doubledot');
-const german_accent_u_doubledot = document.getElementById('german-accent-u-doubledot');
-const german_beta = document.getElementById('german-beta');
-// All Accented Non-English Keyboard Letters (From German)
-germanAccentedLetters = {
-    a_doubledot: "ä",
-    A_DOUBLEDOT: "Ä",
-    o_doubledot: "ö",
-    O_DOUBLEDOT: "Ö",
-    u_doubledot: "ü",
-    U_DOUBLEDOT: "Ü",
-    beta: "ß",
-    BETA: "ẞ"
-}
-
-/* Romanian */
-const romanianContainer = document.getElementById('romanian-container');
-const romanian_uppercaseCheckbox = document.getElementById('romanian-uppercase');
-var romanian_uppercase = document.getElementById('romanian-uppercase').checked;
-const romanian_accent_a_slur = document.getElementById('romanian-accent-a-slur');
-const romanian_accent_a_hat = document.getElementById('romanian-accent-a-hat');
-const romanian_accent_i_hat = document.getElementById('romanian-accent-i-hat');
-const romanian_accent_s_long = document.getElementById('romanian-accent-s-long');
-const romanian_accent_s_short = document.getElementById('romanian-accent-s-short');
-const romanian_accent_t_long = document.getElementById('romanian-accent-t-long');
-const romanian_accent_t_short = document.getElementById('romanian-accent-t-short');
-// All Accented Non-English Keyboard Letters (From romanian)
-romanianAccentedLetters = {
-    a_slur: "ă",
-    A_SLUR: "Ă",
-    a_hat: "â",
-    A_HAT: "Â",
-    i_hat: "î",
-    I_HAT: "Î",
-    s_long: "ș",
-    S_LONG: "Ș",
-    s_short: "ş",
-    S_SHORT: "Ş",
-    t_long: "ț",
-    T_LONG: "Ț",
-    t_short: "ţ",
-    T_SHORT: "Ţ",
-}
-
-/* French */
-const dutchContainer = document.getElementById('dutch-container');
-const dutch_uppercaseCheckbox = document.getElementById('dutch-uppercase');
-var dutch_uppercase = document.getElementById('dutch-uppercase').checked;
-const dutch_accent_e = document.getElementById('dutch-accent-e');
-const dutch_accent_e_doubledot = document.getElementById('dutch-accent-e-doubledot');
-const dutch_accent_i_doubledot = document.getElementById('dutch-accent-i-doubledot');
-const dutch_accent_o = document.getElementById('dutch-accent-o');
-const dutch_accent_o_doubledot = document.getElementById('dutch-accent-o-doubledot');
-const dutch_accent_u_doubledot = document.getElementById('dutch-accent-u-doubledot');
-// All Accented Non-English Keyboard Letters (From Dutch)
-dutchAccentedLetters = {
-    e: "é",
-    E: "É",
-    e_doubledot: "ë",
-    E_DOUBLEDOT: "Ë",
-    i_doubledot: "ï",
-    I_DOUBLEDOT: "Ï",
-    o: "ó",
-    O: "Ó",
-    o_doubledot: "ö",
-    O_DOUBLEDOT: "Ö",
-    u_doubledot: "ü",
-    U_DOUBLEDOT: "Ü"
-}
-
 /* -----------------------
 |  CORE FUNCTIONALITIES  |
 ----------------------- */
 // Hide Containers 
-spanishContainer.style.display = "none";
-frenchContainer.style.display = "none";
-germanContainer.style.display = "none";
-romanianContainer.style.display = "none";
-dutchContainer.style.display = "none";
-langPromptContainer.style.display = "none";
+setTimeout(function() {
+    spanishContainer.style.display = "none";
+    frenchContainer.style.display = "none";
+    germanContainer.style.display = "none";
+    romanianContainer.style.display = "none";
+    dutchContainer.style.display = "none";
+    langPromptContainer.style.display = "none";
+}, 0050);
 
 /* Load Chrome Vars */
 // Chrome-Synced Variables
@@ -196,8 +49,8 @@ function getChromeVars() {
         languageRestored = item.language;
     });
     // Call functions to use the Chrome Variables
-    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 050);
-    setTimeout(function() {useRestoredLanguage(languageRestored);}, 050);
+    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 0001);
+    setTimeout(function() {useRestoredLanguage(languageRestored);}, 0100);
 }
 
 function useRestoredColorMode(colorModeRestored) {
@@ -231,6 +84,36 @@ function useRestoredLanguage(languageRestored) {
 /* ----------
 |  Spanish  |
 ---------- */
+// Variables
+const spanishContainer = document.getElementById('spanish-container');
+const spanish_uppercaseCheckbox = document.getElementById('spanish-uppercase');
+var spanish_uppercase = document.getElementById('spanish-uppercase').checked;
+const spanish_question_mark = document.getElementById('spanish-upsidedown-questionmark');
+const spanish_exclamation_point = document.getElementById('spanish-upsidedown-exclamationmark');
+const spanish_accent_a = document.getElementById('spanish-accent-a');
+const spanish_accent_e = document.getElementById('spanish-accent-e');
+const spanish_accent_i = document.getElementById('spanish-accent-i');
+const spanish_accent_n = document.getElementById('spanish-accent-n');
+const spanish_accent_o = document.getElementById('spanish-accent-o');
+const spanish_accent_u = document.getElementById('spanish-accent-u');
+// All Accented Non-English Keyboard Letters (From Spanish)
+spanishAccentedLetters = {
+    question_mark: "¿",
+    exclamation_point: "¡",
+    a: "á",
+    A: "Á",
+    e: "é",
+    E: "É",
+    i: "í",
+    I: "Í",
+    n: "ñ",
+    N: "Ñ",
+    o: "ó",
+    O: "Ó",
+    u: "ú",
+    U: "Ú"
+}
+
 // On Click Listeners
 spanish_question_mark.onclick = function() {
     typingArea.value += spanishAccentedLetters.question_mark;
@@ -338,6 +221,63 @@ document.addEventListener("keydown", function (event) {
 /* ---------
 |  French  |
 --------- */
+// Variables
+const frenchContainer = document.getElementById('french-container');
+const french_uppercaseCheckbox = document.getElementById('french-uppercase');
+var french_uppercase = document.getElementById('french-uppercase').checked;
+const french_accent_a_backward = document.getElementById('french-accent-a-backward');
+const french_accent_a_hat = document.getElementById('french-accent-a-hat');
+const french_combined_ae = document.getElementById('french-combined-ae');
+const french_accent_c = document.getElementById('french-accent-c');
+const french_accent_e = document.getElementById('french-accent-e');
+const french_accent_e_backward = document.getElementById('french-accent-e-backward');
+const french_accent_e_hat = document.getElementById('french-accent-e-hat');
+const french_accent_e_doubledot = document.getElementById('french-accent-e-doubledot');
+const french_accent_i_doubledot = document.getElementById('french-accent-i-doubledot');
+const french_accent_i_hat = document.getElementById('french-accent-i-hat');
+const french_accent_o_hat = document.getElementById('french-accent-o-hat');
+const french_combined_oe = document.getElementById('french-combined-oe');
+const french_accent_u_backward = document.getElementById('french-accent-u-backward');
+const french_accent_u_hat = document.getElementById('french-accent-u-hat');
+const french_accent_u_doubledot = document.getElementById('french-accent-u-doubledot');
+const french_accent_y_doubledot = document.getElementById('french-accent-y-doubledot');
+// All Accented Non-English Keyboard Letters (From French)
+frenchAccentedLetters = {
+    a_backward: "à",
+    A_BACKWARD: "À",
+    a_hat: "â",
+    A_HAT: "Â",
+    ae: "æ",
+    AE: "Æ",
+    c: "ç",
+    C: "Ç",
+    e: "é",
+    E: "É",
+    e_backward: "è",
+    E_BACKWARD: "È",
+    e_hat: "ê",
+    E_HAT: "Ê",
+    e_doubledot: "ë",
+    E_DOUBLEDOT: "Ë",
+    i_doubledot: "ï",
+    I_DOUBLEDOT: "Ï",
+    i_hat: "î",
+    I_HAT: "Î",
+    o_hat: "ô",
+    O_HAT: "Ô",
+    oe: "œ",
+    OE: "Œ",
+    u_backward: "ù",
+    U_BACKWARD: "Ù",
+    u_hat: "û",
+    U_HAT: "Û",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü",
+    y_doubledot: "ÿ",
+    Y_DOUBLEDOT: "Ÿ"
+}
+
+// On-Click Listeners
 french_accent_a_backward.onclick = function() {
     if (!french_uppercase) {
         typingArea.value += frenchAccentedLetters.a_backward;
@@ -446,6 +386,42 @@ french_combined_oe.onclick = function() {
         typingArea.focus();
     }
 }
+french_accent_u_backward.onclick = function() {
+    if (!french_uppercase) {
+        typingArea.value += frenchAccentedLetters.u_backward;
+        typingArea.focus();
+    } else if (french_uppercase) {
+        typingArea.value += frenchAccentedLetters.U_BACKWARD;
+        typingArea.focus();
+    }
+}
+french_accent_u_hat.onclick = function() {
+    if (!french_uppercase) {
+        typingArea.value += frenchAccentedLetters.u_hat;
+        typingArea.focus();
+    } else if (french_uppercase) {
+        typingArea.value += frenchAccentedLetters.U_HAT;
+        typingArea.focus();
+    }
+}
+french_accent_u_doubledot.onclick = function() {
+    if (!french_uppercase) {
+        typingArea.value += frenchAccentedLetters.u_doubledot;
+        typingArea.focus();
+    } else if (french_uppercase) {
+        typingArea.value += frenchAccentedLetters.U_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
+french_accent_y_doubledot.onclick = function() {
+    if (!french_uppercase) {
+        typingArea.value += frenchAccentedLetters.y_doubledot;
+        typingArea.focus();
+    } else if (french_uppercase) {
+        typingArea.value += frenchAccentedLetters.Y_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
 
 // Change Text of buttons
 function french_changeButtonTextCase() {
@@ -462,6 +438,10 @@ function french_changeButtonTextCase() {
         french_accent_i_hat.textContent = frenchAccentedLetters.i_hat;
         french_accent_o_hat.textContent = frenchAccentedLetters.o_hat;
         french_combined_oe.textContent = frenchAccentedLetters.oe;
+        french_accent_u_backward.textContent = frenchAccentedLetters.u_backward;
+        french_accent_u_hat.textContent = frenchAccentedLetters.u_hat;
+        french_accent_u_doubledot.textContent = frenchAccentedLetters.u_doubledot;
+        french_accent_y_doubledot.textContent = frenchAccentedLetters.y_doubledot;
         french_uppercase = false;
     } else if (french_uppercaseCheckbox.checked) {
         french_accent_a_backward.textContent = frenchAccentedLetters.A_BACKWARD;
@@ -476,6 +456,10 @@ function french_changeButtonTextCase() {
         french_accent_i_hat.textContent = frenchAccentedLetters.I_HAT;
         french_accent_o_hat.textContent = frenchAccentedLetters.O_HAT;
         french_combined_oe.textContent = frenchAccentedLetters.OE;
+        french_accent_u_backward.textContent = frenchAccentedLetters.U_BACKWARD;
+        french_accent_u_hat.textContent = frenchAccentedLetters.U_HAT;
+        french_accent_u_doubledot.textContent = frenchAccentedLetters.U_DOUBLEDOT;
+        french_accent_y_doubledot.textContent = frenchAccentedLetters.Y_DOUBLEDOT;
         french_uppercase = true;
     }
 }
@@ -502,6 +486,26 @@ document.addEventListener("keydown", function (event) {
 /* ---------
 |  German  |
 --------- */
+// Variables
+const germanContainer = document.getElementById('german-container');
+const german_uppercaseCheckbox = document.getElementById('german-uppercase');
+var german_uppercase = document.getElementById('german-uppercase').checked;
+const german_accent_a_doubledot = document.getElementById('german-accent-a-doubledot');
+const german_accent_o_doubledot = document.getElementById('german-accent-o-doubledot');
+const german_accent_u_doubledot = document.getElementById('german-accent-u-doubledot');
+const german_beta = document.getElementById('german-beta');
+// All Accented Non-English Keyboard Letters (From German)
+germanAccentedLetters = {
+    a_doubledot: "ä",
+    A_DOUBLEDOT: "Ä",
+    o_doubledot: "ö",
+    O_DOUBLEDOT: "Ö",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü",
+    beta: "ß",
+    BETA: "ẞ"
+}
+
 // Onclick Listeners
 german_accent_a_doubledot.onclick = function() {
     if (!german_uppercase) {
@@ -585,6 +589,35 @@ setTimeout(function() {
         typingArea.style.fontWeight = "bold";
     }
 }, 0250);
+
+// Variables
+const romanianContainer = document.getElementById('romanian-container');
+const romanian_uppercaseCheckbox = document.getElementById('romanian-uppercase');
+var romanian_uppercase = document.getElementById('romanian-uppercase').checked;
+const romanian_accent_a_slur = document.getElementById('romanian-accent-a-slur');
+const romanian_accent_a_hat = document.getElementById('romanian-accent-a-hat');
+const romanian_accent_i_hat = document.getElementById('romanian-accent-i-hat');
+const romanian_accent_s_long = document.getElementById('romanian-accent-s-long');
+const romanian_accent_s_short = document.getElementById('romanian-accent-s-short');
+const romanian_accent_t_long = document.getElementById('romanian-accent-t-long');
+const romanian_accent_t_short = document.getElementById('romanian-accent-t-short');
+// All Accented Non-English Keyboard Letters (From Romanian)
+romanianAccentedLetters = {
+    a_slur: "ă",
+    A_SLUR: "Ă",
+    a_hat: "â",
+    A_HAT: "Â",
+    i_hat: "î",
+    I_HAT: "Î",
+    s_long: "ș",
+    S_LONG: "Ș",
+    s_short: "ş",
+    S_SHORT: "Ş",
+    t_long: "ț",
+    T_LONG: "Ț",
+    t_short: "ţ",
+    T_SHORT: "Ţ",
+}
 
 // Onclick Listeners
 romanian_accent_a_slur.onclick = function() {
@@ -695,6 +728,33 @@ document.addEventListener("keydown", function (event) {
 /* --------
 |  Dutch  |
 -------- */
+// Variables
+const dutchContainer = document.getElementById('dutch-container');
+const dutch_uppercaseCheckbox = document.getElementById('dutch-uppercase');
+var dutch_uppercase = document.getElementById('dutch-uppercase').checked;
+const dutch_accent_e = document.getElementById('dutch-accent-e');
+const dutch_accent_e_doubledot = document.getElementById('dutch-accent-e-doubledot');
+const dutch_accent_i_doubledot = document.getElementById('dutch-accent-i-doubledot');
+const dutch_accent_o = document.getElementById('dutch-accent-o');
+const dutch_accent_o_doubledot = document.getElementById('dutch-accent-o-doubledot');
+const dutch_accent_u_doubledot = document.getElementById('dutch-accent-u-doubledot');
+// All Accented Non-English Keyboard Letters (From Dutch)
+dutchAccentedLetters = {
+    e: "é",
+    E: "É",
+    e_doubledot: "ë",
+    E_DOUBLEDOT: "Ë",
+    i_doubledot: "ï",
+    I_DOUBLEDOT: "Ï",
+    o: "ó",
+    O: "Ó",
+    o_doubledot: "ö",
+    O_DOUBLEDOT: "Ö",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü"
+}
+
+// On-Click Listeners
 dutch_accent_e.onclick = function() {
     if (!dutch_uppercase) {
         typingArea.value += dutchAccentedLetters.e;

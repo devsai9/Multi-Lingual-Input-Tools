@@ -22,7 +22,7 @@ const accent_t_short = document.getElementById('romanian-accent-t-short');
 
 document.getElementById("romanian-input-buttons").style.fontFamily = "sans-serif";
 
-// All Accented Non-English Keyboard Letters (From Spanish)
+// All Accented Non-English Keyboard Letters (From Romanian)
 accentedLetters = {
     a_s: "ă",
     A_s: "Ă",
@@ -40,7 +40,7 @@ accentedLetters = {
     T_s: "Ţ",
 }
 
-/* Extension Core Function (Spanish) */
+/* Extension Core Function (Romanian) */
 // Change Text of Buttons
 function changeButtonTextCase() {
     uppercase = uppercaseCheckbox.checked;

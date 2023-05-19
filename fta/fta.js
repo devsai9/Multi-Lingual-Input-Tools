@@ -141,6 +141,32 @@ romanianAccentedLetters = {
     T_SHORT: "Ţ",
 }
 
+/* French */
+const dutchContainer = document.getElementById('dutch-container');
+const dutch_uppercaseCheckbox = document.getElementById('dutch-uppercase');
+var dutch_uppercase = document.getElementById('dutch-uppercase').checked;
+const dutch_accent_e = document.getElementById('dutch-accent-e');
+const dutch_accent_e_doubledot = document.getElementById('dutch-accent-e-doubledot');
+const dutch_accent_i_doubledot = document.getElementById('dutch-accent-i-doubledot');
+const dutch_accent_o = document.getElementById('dutch-accent-o');
+const dutch_accent_o_doubledot = document.getElementById('dutch-accent-o-doubledot');
+const dutch_accent_u_doubledot = document.getElementById('dutch-accent-u-doubledot');
+// All Accented Non-English Keyboard Letters (From Dutch)
+dutchAccentedLetters = {
+    e: "é",
+    E: "É",
+    e_doubledot: "ë",
+    E_DOUBLEDOT: "Ë",
+    i_doubledot: "ï",
+    I_DOUBLEDOT: "Ï",
+    o: "ó",
+    O: "Ó",
+    o_doubledot: "ö",
+    O_DOUBLEDOT: "Ö",
+    u_doubledot: "ü",
+    U_DOUBLEDOT: "Ü"
+}
+
 /* -----------------------
 |  CORE FUNCTIONALITIES  |
 ----------------------- */
@@ -149,6 +175,7 @@ spanishContainer.style.display = "none";
 frenchContainer.style.display = "none";
 germanContainer.style.display = "none";
 romanianContainer.style.display = "none";
+dutchContainer.style.display = "none";
 langPromptContainer.style.display = "none";
 
 /* Load Chrome Vars */
@@ -192,6 +219,8 @@ function useRestoredLanguage(languageRestored) {
         germanContainer.style.display = "block";
     } else if (languageRestored == 'romanian') {
         romanianContainer.style.display = "block";
+    } else if (languageRestored == 'dutch') {
+        dutchContainer.style.display = "block";
     }
 }
 
@@ -350,7 +379,7 @@ french_accent_e.onclick = function() {
         typingArea.value += frenchAccentedLetters.e;
         typingArea.focus();
     } else if (french_uppercase) {
-        typingArea.value += frenchAccentedLetters.e;
+        typingArea.value += frenchAccentedLetters.E;
         typingArea.focus();
     }
 }
@@ -660,5 +689,103 @@ document.addEventListener("keydown", function (event) {
             romanian_uppercase = false;
         }
         romanian_changeButtonTextCase();
+    }
+});
+
+/* --------
+|  Dutch  |
+-------- */
+dutch_accent_e.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.e;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.E;
+        typingArea.focus();
+    }
+}
+dutch_accent_e_doubledot.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.e_doubledot;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.E_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
+dutch_accent_i_doubledot.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.i_doubledot;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.I_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
+dutch_accent_o.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.o;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.O;
+        typingArea.focus();
+    }
+}
+dutch_accent_o_doubledot.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.o_doubledot;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.O_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
+dutch_accent_u_doubledot.onclick = function() {
+    if (!dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.u_doubledot;
+        typingArea.focus();
+    } else if (dutch_uppercase) {
+        typingArea.value += dutchAccentedLetters.U_DOUBLEDOT;
+        typingArea.focus();
+    }
+}
+
+// Change Text of buttons
+function dutch_changeButtonTextCase() {
+    if (!dutch_uppercaseCheckbox.checked) {
+        dutch_accent_e.textContent = dutchAccentedLetters.e;
+        dutch_accent_e_doubledot.textContent = dutchAccentedLetters.e_doubledot;
+        dutch_accent_i_doubledot.textContent = dutchAccentedLetters.i_doubledot;
+        dutch_accent_o.textContent = dutchAccentedLetters.o;
+        dutch_accent_o_doubledot.textContent = dutchAccentedLetters.o_doubledot;
+        dutch_accent_u_doubledot.textContent = dutchAccentedLetters.u_doubledot;
+        dutch_uppercase = false;
+    } else if (dutch_uppercaseCheckbox.checked) {
+        dutch_accent_e.textContent = dutchAccentedLetters.E;
+        dutch_accent_e_doubledot.textContent = dutchAccentedLetters.E_DOUBLEDOT;
+        dutch_accent_i_doubledot.textContent = dutchAccentedLetters.I_DOUBLEDOT;
+        dutch_accent_o.textContent = dutchAccentedLetters.O;
+        dutch_accent_o_doubledot.textContent = dutchAccentedLetters.O_DOUBLEDOT;
+        dutch_accent_u_doubledot.textContent = dutchAccentedLetters.U_DOUBLEDOT;
+        dutch_uppercase = true;
+    }
+}
+
+// On Change Listener for when the user wants lowercase or uppercase letters
+dutch_uppercaseCheckbox.onchange = function() {
+    dutch_changeButtonTextCase();
+}
+
+// Using Shift to toggle lowercase and uppercase
+document.addEventListener("keydown", function (event) {
+    if (event.key == "Shift") {
+        if (!dutch_uppercase) {
+            dutch_uppercaseCheckbox.checked = true;
+            dutch_uppercase = true;
+        } else if (dutch_uppercase) {
+            dutch_uppercaseCheckbox.checked = false;
+            dutch_uppercase = false;
+        }
+        dutch_changeButtonTextCase();
     }
 });

@@ -24,11 +24,6 @@ h1 {
     text-align: center;
 }
 
-.big-link {
-    font-size: 40px;
-    margin-right: 15px;
-}
-
 .light-mode a {
     color: black;
 }
@@ -49,4 +44,9 @@ h1 {
     display: flex;
     align-items: center;
     margin-top: 20px;
+}
+
+i {
+    font-size: 40px;
+    padding: 10px;
 }

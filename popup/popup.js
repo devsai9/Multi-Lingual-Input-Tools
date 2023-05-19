@@ -13,6 +13,7 @@ document.getElementById('spanish-container').style.display = "none";
 document.getElementById('french-container').style.display = "none";
 document.getElementById('german-container').style.display = "none";
 document.getElementById('romanian-container').style.display = "none";
+document.getElementById('dutch-container').style.display = "none";
 document.getElementById('language-select-prompt').style.display = "none";
 
 // Chrome-Synced Variables
@@ -69,6 +70,11 @@ function useRestoredLanguage(languageRestored) {
         romanianScript.src = 'language/romanian.js';
         document.getElementById('scripts').appendChild(romanianScript);
         document.getElementById('romanian-container').style.display = "block";
+    } else if (languageRestored == 'dutch') {
+        var dutchScript = document.createElement('script');
+        dutchScript.src = 'language/dutch.js';
+        document.getElementById('scripts').appendChild(dutchScript);
+        document.getElementById('dutch-container').style.display = "block";
     }
 }
 

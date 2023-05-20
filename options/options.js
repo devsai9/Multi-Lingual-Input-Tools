@@ -54,6 +54,8 @@ function useRestoredLanguage(languageRestored) {
         document.getElementById('romanian').checked = true;
     } else if (languageRestored == 'dutch') {
         document.getElementById('dutch').checked = true;
+    } else if (languageRestored == 'portuguese') {
+        document.getElementById('portuguese').checked = true;
     }
 }
 
@@ -117,6 +119,13 @@ function setLanguage() {
         }, function () {
             setTimeout(function() {document.getElementById("dutch-label").innerText = "Dutch 🇳🇱";}, 1000);
         });
+    } else if (document.getElementById("portuguese").checked == true) {
+        document.getElementById("portuguese-label").innerText = "Syncing...";
+        chrome.storage.sync.set({
+            language: 'portuguese'
+        }, function () {
+            setTimeout(function() {document.getElementById("portuguese-label").innerText = "Portuguese 🇵🇹";}, 1000);
+        });
     } 
 }
 
@@ -139,5 +148,8 @@ document.getElementById("romanian").onchange = function() {
     setLanguage();
 }
 document.getElementById("dutch").onchange = function() {
+    setLanguage();
+}
+document.getElementById("portuguese").onchange = function() {
     setLanguage();
 }

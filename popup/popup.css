@@ -14,15 +14,17 @@
     margin-top: 20px;
 }
 
+#ultimate-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
 #language-select-prompt {
     min-width: 600px;
 }
 
-#french-container {
-    min-width: 550px;
-}
-
-#prompt-options-page-en, #prompt-options-page-es, #prompt-options-page-fr, #prompt-options-page-de, #prompt-options-page-ro {
+#prompt-options-page-en /*, #prompt-options-page-es, #prompt-options-page-fr, #prompt-options-page-de, #prompt-options-page-ro */ {
     text-decoration: underline;
     cursor: pointer;
 }

@@ -97,6 +97,10 @@ function useRestoredLanguage(languageRestored) {
             document.getElementsByClassName('input-buttons')[0].style.fontFamily = 'sans-serif';
         }
 
+        if (languageRestored == 'french') {
+            document.querySelector('#ultimate-container').style.width = "650px";
+        }
+
         document.getElementById('type-lang').textContent = 'Type ' + languageRestored.charAt(0).toUpperCase() + languageRestored.slice(1);
     }
 }

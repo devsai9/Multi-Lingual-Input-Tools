@@ -1,6 +1,6 @@
 # Multi-Lingual Input Tools
 # Info:
-ℹ️ Multi-Lingual Input Tools is a browser extension developed by me ([@devsai9](https://github.com/devsai9)). It helps its users to easily copy & paste accented letters and symbols that are not on the English QWERTY keyboard from a variety of languages, such as Spanish, French, German, Romanian, Portuguese, and Dutch, with more languages still being added!
+ℹ️ Multi-Lingual Input Tools is a browser extension developed by [@devsai9](https://github.com/devsai9). It helps its users to easily copy & paste accented letters and symbols that are not on the English keyboard from a variety of languages, such as Spanish, French, German, Romanian, Portuguese, and Dutch, with more languages still being added!
 ### Installation:
 🛒 It is currently available on the [Chrome Webstore](https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en) and [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl)
 

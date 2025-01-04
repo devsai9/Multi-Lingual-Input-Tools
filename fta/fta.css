@@ -1,13 +1,3 @@
-/*  THIS STYLESHEET IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
-    STYLESHEET FOR FTA
-    --------------------------------------------------------------
-    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
-    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
-    --------------------------------------------------------------
-    Path: fta/fta.css
-    --------------------------------------------------------------
-*/
-
 #prompt-options-page {
     text-decoration: underline;
     cursor: pointer;
@@ -35,7 +25,8 @@
 }
 
 .type-textbox {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
     border-radius: 50px;
 }

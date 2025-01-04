@@ -1,13 +1,3 @@
-/*  THIS SCRIPT IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
-    JAVASCRIPT FOR ABOUT PAGE
-    --------------------------------------------------------------
-    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
-    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
-    --------------------------------------------------------------
-    Path: about/about.js
-    --------------------------------------------------------------
-*/
-
 // Chrome-Synced Variables
 var colorModeRestored = '/';
 
@@ -19,7 +9,7 @@ function getChromeVars() {
     }, function (item) {
         colorModeRestored = item.colorMode;
     });
-   setTimeout(function() {useColorMode(colorModeRestored);}, 050);
+   setTimeout(function() {useColorMode(colorModeRestored);}, 50);
 }
 
 function useColorMode(colorModeRestored) {

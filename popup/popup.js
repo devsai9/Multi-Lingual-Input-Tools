@@ -1,19 +1,12 @@
-/*  THIS SCRIPT IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
-    JAVASCRIPT FOR POPUP
-    --------------------------------------------------------------
-    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
-    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
-    --------------------------------------------------------------
-    Path: popup/popup.js
-    --------------------------------------------------------------
-*/
-
-// Hide Containers 
-document.getElementById('language-select-prompt').style.display = "none";
+// Hide Containers
+const langPromptContainer = document.getElementById('language-select-prompt');
+langPromptContainer.style.display = "none";
+const usageContainer = document.getElementById('ultimate-container');
+usageContainer.style.display = "none";
 
 // Define every letter's HTML element
 const uppercaseCheckbox = document.getElementById('uppercase');
-var uppercase = document.getElementById('uppercase').checked;
+let uppercase = document.getElementById('uppercase').checked;
 const accent_a_forward = document.getElementById('accent-a-forward');
 const accent_a_backward = document.getElementById('accent-a-backward');
 const accent_a_doubledot = document.getElementById('accent-a-doubledot');
@@ -49,8 +42,8 @@ const upside_down_question_mark = document.getElementById('upsidedown-questionma
 const upside_down_exclamation_point = document.getElementById('upsidedown-exclamationmark');
 
 // Chrome-Synced Variables
-var colorModeRestored = '/';
-var languageRestored = '/';
+let colorModeRestored = '/';
+let languageRestored = '/';
 
 // Get Chrome Sync Variables
 getChromeVars();
@@ -65,8 +58,8 @@ function getChromeVars() {
         languageRestored = item.language;
     });
     // Call functions to use the Chrome Variables
-    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 050);
-    setTimeout(function() {useRestoredLanguage(languageRestored);}, 050);
+    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 50);
+    setTimeout(function() {useRestoredLanguage(languageRestored);}, 50);
 }
 
 // Use the Chrome "colorMode" (Color Mode) variable
@@ -80,17 +73,17 @@ function useRestoredColorMode(colorModeRestored) {
 
 // Use the Chrome "language" (Language) variable
 function useRestoredLanguage(languageRestored) {
-    var langElements = document.querySelectorAll('.' + languageRestored);
-    var elements = document.querySelectorAll('.input-button');
+    let langElements = document.querySelectorAll('.' + languageRestored);
+    let elements = document.querySelectorAll('.input-button');
     elements.forEach(element => {
         element.style.display = 'none';
     });
     
-    if (languageRestored == 'prompt') {
-        langPromptContainer.style.display = "initial";
-    } else {
+    if (languageRestored == 'prompt') langPromptContainer.style.display = "block";
+    else {
+        document.querySelector('#ultimate-container').style.display = "inline-block";
         langElements.forEach(langElement => {
-            langElement.style.display = 'initial';
+            langElement.style.display = 'inline-block';
         });
 
         if (languageRestored == 'romanian' || languageRestored == 'german') {
@@ -113,34 +106,6 @@ document.getElementById('prompt-options-page-en').onclick = function() {
         window.open(chrome.runtime.getURL('/options/options.html'));
     }
 }
-// document.getElementById('prompt-options-page-es').onclick = function() {
-//     if (chrome.runtime.openOptionsPage) {
-//         chrome.runtime.openOptionsPage();
-//     } else {
-//         window.open(chrome.runtime.getURL('/options/options.html'));
-//     }
-// }
-// document.getElementById('prompt-options-page-fr').onclick = function() {
-//     if (chrome.runtime.openOptionsPage) {
-//         chrome.runtime.openOptionsPage();
-//     } else {
-//         window.open(chrome.runtime.getURL('/options/options.html'));
-//     }
-// }
-// document.getElementById('prompt-options-page-de').onclick = function() {
-//     if (chrome.runtime.openOptionsPage) {
-//         chrome.runtime.openOptionsPage();
-//     } else {
-//         window.open(chrome.runtime.getURL('/options/options.html'));
-//     }
-// }
-// document.getElementById('prompt-options-page-ro').onclick = function() {
-//     if (chrome.runtime.openOptionsPage) {
-//         chrome.runtime.openOptionsPage();
-//     } else {
-//         window.open(chrome.runtime.getURL('/options/options.html'));
-//     }
-// }
 
 // On Click Listeners in Menu
 document.getElementById('about-icon').onclick = function() {
@@ -233,6 +198,11 @@ document.addEventListener("keydown", function (event) {
         }
         changeButtonTextCase();
     }
+});
+
+uppercaseCheckbox.addEventListener('change', function() {
+    uppercase = uppercaseCheckbox.checked;
+    changeButtonTextCase();
 });
 
 function changeButtonTextCase() {

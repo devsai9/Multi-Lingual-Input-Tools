@@ -1,13 +1,3 @@
-/*  THIS SCRIPT IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
-    JAVASCRIPT FOR FTA
-    --------------------------------------------------------------
-    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
-    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
-    --------------------------------------------------------------
-    Path: fta/fta.js
-    --------------------------------------------------------------
-*/
-
 /* -------------------
 |  DEFINE VARIABLES  |
 ------------------- */
@@ -54,14 +44,14 @@ const typingArea = document.getElementById('textbox');
 // Select Language Prompt
 const langPromptContainer = document.getElementById('language-select-prompt');
 const langPrompt_options_a = document.getElementById('prompt-options-page');
+const typingContainer = document.getElementById('ultimate-container');
 
 /* -----------------------
 |  CORE FUNCTIONALITIES  |
 ----------------------- */
 // Hide Containers 
-setTimeout(function() {
-    langPromptContainer.style.display = "none";
-}, 0050);
+langPromptContainer.style.display = "none";
+typingContainer.style.display = "none";
 
 /* Load Chrome Vars */
 // Chrome-Synced Variables
@@ -80,10 +70,10 @@ function getChromeVars() {
         colorModeRestored = item.colorMode;
         languageRestored = item.language;
     });
+    
     // Call functions to use the Chrome Variables
-    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 0250);
-    setTimeout(function() {useRestoredLanguage(languageRestored);}, 0200);
-
+    setTimeout(function() {useRestoredColorMode(colorModeRestored);}, 250);
+    setTimeout(function() {useRestoredLanguage(languageRestored);}, 200);
 }
 
 function useRestoredColorMode(colorModeRestored) {
@@ -101,11 +91,12 @@ function useRestoredLanguage(languageRestored) {
         element.style.display = 'none';
     });
     
-    if (languageRestored == 'prompt') {
-        langPromptContainer.style.display = "initial";
-    } else {
+    if (languageRestored == 'prompt') langPromptContainer.style.display = "block";
+    else {
+        typingContainer.style.display = 'block';
+
         langElements.forEach(langElement => {
-            langElement.style.display = 'initial';
+            langElement.style.display = 'inline-block';
         });
 
         if (languageRestored == 'romanian' || languageRestored == 'german') {
@@ -152,16 +143,29 @@ accent_y_doubledot.onclick = function() {insertCharacter('ÿ');};
 upside_down_question_mark.onclick = function() {insertCharacter('¿');};
 upside_down_exclamation_point.onclick = function() {insertCharacter('¡');};
 
+langPrompt_options_a.addEventListener('click', function() {
+    if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('/options/options.html'));
+    }
+});
+
 function insertCharacter(character) {
+    const start = typingArea.selectionStart;
+    const end = typingArea.selectionEnd;
+    const text = typingArea.value;
+
     if (uppercase) {
         if (character == 'ß') {
-            typingArea.value += 'ẞ';
+            character = 'ẞ';
         } else {
-            typingArea.value += character.toUpperCase();
+            character = character.toUpperCase();
         }
-    } else {
-        typingArea.value += character;
     }
+
+    typingArea.value = text.slice(0, start) + character + text.slice(start);
+    typingArea.selectionStart = typingArea.selectionEnd = start + character.length;
     typingArea.focus();
 }
 
@@ -177,6 +181,11 @@ document.addEventListener("keydown", function (event) {
         }
         changeButtonTextCase();
     }
+});
+
+uppercaseCheckbox.addEventListener('change', function() {
+    uppercase = uppercaseCheckbox.checked;
+    changeButtonTextCase();
 });
 
 function changeButtonTextCase() {

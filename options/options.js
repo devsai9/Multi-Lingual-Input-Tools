@@ -1,13 +1,3 @@
-/*  THIS SCRIPT IS PART OF THE MULTI-LINGUAL INPUT TOOLS BROWSER EXTENSION
-    JAVASCRIPT FOR OPTIONS PAGE
-    --------------------------------------------------------------
-    Chrome: https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en
-    Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl
-    --------------------------------------------------------------
-    Path: options/options.js
-    --------------------------------------------------------------
-*/
-
 /* GET Stored Vars */
 var colorModeRestored = '/';
 var languageRestored = '/';

@@ -94,12 +94,12 @@ function useRestoredLanguage(languageRestored) {
             document.querySelector('#ultimate-container').style.width = "650px";
         }
 
-        document.getElementById('type-lang').textContent = 'Type ' + languageRestored.charAt(0).toUpperCase() + languageRestored.slice(1);
+        document.getElementById('type-lang').textContent = chrome.i18n.getMessage("type") + " " + chrome.i18n.getMessage(languageRestored) || 'Type ' + languageRestored.charAt(0).toUpperCase() + languageRestored.slice(1);
     }
 }
 
 // On Click Listener for Menu
-document.getElementById('prompt-options-page-en').onclick = function() {
+function openOptionsPage() {
     if (chrome.runtime.openOptionsPage) {
         chrome.runtime.openOptionsPage();
     } else {
@@ -107,7 +107,10 @@ document.getElementById('prompt-options-page-en').onclick = function() {
     }
 }
 
-// On Click Listeners in Menu
+// document.getElementById('prompt-options-page-en').onclick = function() {
+//     openOptionsPage();
+// }
+
 document.getElementById('about-icon').onclick = function() {
     window.open(chrome.runtime.getURL('/about/about.html'));
 }
@@ -117,11 +120,7 @@ document.getElementById('fta-icon').onclick = function() {
 }
 
 document.getElementById('settings-icon').onclick = function() {
-    if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-    } else {
-        window.open(chrome.runtime.getURL('/options/options.html'));
-    }
+    openOptionsPage();
 }
 
 // Event Listeners for buttons

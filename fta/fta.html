@@ -14,25 +14,25 @@
     <br>
     <div class="custom-container" id="language-select-prompt">
         <div class="title" id="prompt-title">
-            <h1>Multi-Lingual Input Tools</h1>
+            <h1 data-i18n="appName">Multi-Lingual Input Tools</h1>
         </div>
         <div class="subtitle">
-            <h2>Please select a language</h2>
+            <h2 data-i18n="selectLangHeader">Please select a language</h2>
         </div>
         <div class="prompt">
-            <p>Please go to <a id="prompt-options-page">options</a> and select a language</p>
+            <p data-i18n="FTA_goToOptions">Please go to options via the main menu to select a language</p>
         </div>
     </div>
     <div class="custom-container" id="ultimate-container">
         <div class="title">
-            <h1>Multi-Lingual Input Tools</h1>
+            <h1 data-i18n="appName">Multi-Lingual Input Tools</h1>
         </div>
         <div class="subtitle">
             <h2 id="type-lang">Type </h2>
         </div>
         <div class="input-buttons">
             <input type="checkbox" id="uppercase" class="btn-check" name="uppercase-letters" value=" uppercase">
-            <label for="uppercase" id="uppercase-label" class="btn btn-outline-primary mb-3 mt-1"> uppercase</label><br>
+            <label for="uppercase" id="uppercase-label" class="btn btn-outline-primary mb-3 mt-1" data-i18n="uppercase">uppercase</label><br>
             <button id="accent-a-forward" class="input-button btn btn-light spanish portuguese">á</button>
             <button id="accent-a-backward" class="input-button btn btn-light french portuguese">à</button>
             <button id="accent-a-doubledot" class="input-button btn btn-light german">ä</button>
@@ -68,11 +68,12 @@
             <button id="upsidedown-exclamationmark" class="input-button btn btn-light spanish">¡</button>
         </div>
         <div class="type-textbox">
-            <textarea id="textbox" rows="22" cols="70" placeholder="Type ⌨️ normally here and use the buttons above ⬆️ to insert áccéñted letters and symbols¡" autofocus></textarea>
+            <textarea id="textbox" rows="22" cols="70" placeholder="Type ⌨️ normally here and use the buttons above ⬆️ to insert áccéñted letters and symbols¡" autofocus data-i18n="FTA_textarea;placeholder"></textarea>
         </div>
     </div>
     <div id="scripts">
         <script src="fta.js"></script>
+        <script src="../i18n.js"></script>
     </div>
 </body>
 </html>

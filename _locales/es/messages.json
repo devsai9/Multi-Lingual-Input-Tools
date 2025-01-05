@@ -1,0 +1,107 @@
+{
+    "appName": {
+        "message": "Herramientas de Entrada Multilingües",
+        "description": "Nombre de la extensión."
+    },
+    "appDesc": {
+        "message": "¡Copie y pegue rápidamente letras y símbolos acentuados de una variedad de idiomas!",
+        "description": "Descripción de la extensión."
+    },
+
+    "aboutDevMenu": {
+        "message": "Sobre el Desarrollador"
+    },
+    "FTAMenu": {
+        "message": "Área de Escritura Completa"
+    },
+    "settingsMenu": {
+        "message": "Configuración de la Extensión"
+    },
+
+    "selectLangHeader": {
+        "message": "Por favor seleccione un idioma"
+    },
+    "goToOptions": {
+        "message": "Por favor, vaya a <i class=\"bi bi-gear-fill\"></i> para seleccionar un idioma"
+    },
+    "FTA_goToOptions": {
+        "message": "Vaya a las opciones a través de la ventana emergente principal para seleccionar un idioma"
+    },
+
+    "type": {
+        "message": "Escribir"
+    },
+    "spanish": {
+        "message": "Español"
+    },
+    "french": {
+        "message": "Francés"
+    },
+    "german": {
+        "message": "Alemán"
+    },
+    "romanian": {
+        "message": "Rumano"
+    },
+    "dutch": {
+        "message": "Holandés"
+    },
+    "portuguese": {
+        "message": "Portugués"
+    },
+
+    "uppercase": {
+        "message": "Mayúsculas"
+    },
+
+    "colorMode": {
+        "message": "Modo de Color:"
+    },
+
+    "options": {
+        "message": "Opciones"
+    },
+
+    "language": {
+        "message": "El idioma:"
+    },
+
+    "lightMode": {
+        "message": "El Modo de Luz"
+    },
+    "darkMode": {
+        "message": "El Modo Oscuro"
+    },
+
+    "FTA": {
+        "message": "Área de Escritura Completa"
+    },
+    "FTA_textarea": {
+        "message": "¡Escriba ⌨ normalmente aquí y use los botones de arriba ⬆ para insertar letras y símbolos acentuados!"
+    },
+
+    "devSocials": {
+        "message": "Las Redes Sociales del Desarrollador:"
+    },
+    "devYT": {
+        "message": "Canal de YouTube del desarrollador:"
+    },
+    "devBlog": {
+        "message": "Blog del desarrollador:"
+    },
+    "devMoreExtensions": {
+        "message": "Más extensiones del desarrollador (Tienda de Microsoft Edge Add-ons):"
+    },
+    "devGoogleDevProf": {
+        "message": "Perfil de desarrollador de Google:"
+    },
+    "devGitHubProf": {
+        "message": "Perfil de GitHub del desarrollador:"
+    },
+    "devStackOverflowProf": {
+        "message": "Perfil de Stack Overflow del desarrollador:"
+    },
+    "openSource": {
+        "message": "¡Esta extensión es de código abierto!<br><a href=\"https://github.com/devsai9/Multi-Lingual-Input-Tools\">Ver GitHub</a>"
+    }
+}

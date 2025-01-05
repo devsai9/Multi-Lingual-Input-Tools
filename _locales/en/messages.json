@@ -6,5 +6,102 @@
     "appDesc": {
         "message": "Quickly copy & paste accented letters and symbols from a variety of languages!",
         "description": "The description of the extension."
+    },
+
+    "aboutDevMenu": {
+        "message": "About the Developer"
+    },
+    "FTAMenu": {
+        "message": "Full Typing Area"
+    },
+    "settingsMenu": {
+        "message": "Extension Settings"
+    },
+
+    "selectLangHeader": {
+        "message": "Please select a language"
+    },
+    "goToOptions": {
+        "message": "Please go to <i class=\"bi bi-gear-fill\"></i> to select a language"
+    },
+    "FTA_goToOptions": {
+        "message": "Please go to options via the main popup to select a language"
+    },
+
+    "type": {
+        "message": "Type"
+    },
+    "spanish": {
+        "message": "Spanish"
+    },
+    "french": {
+        "message": "French"
+    },
+    "german": {
+        "message": "German"
+    },
+    "romanian": {
+        "message": "Romanian"
+    },
+    "dutch": {
+        "message": "Dutch"
+    },
+    "portuguese": {
+        "message": "Portuguese"
+    },
+
+    "uppercase": {
+        "message": "Uppercase"
+    },
+
+    "options": {
+        "message": "Options"
+    },
+
+    "colorMode": {
+        "message": "Color Mode:"
+    },
+
+    "language": {
+        "message": "Language:"
+    },
+
+    "lightMode": {
+        "message": "Light Mode"
+    },
+    "darkMode": {
+        "message": "Dark Mode"
+    },
+
+    "FTA": {
+        "message": "Full Typing Area"
+    },
+    "FTA_textarea": {
+        "message": "Type ⌨️ normally here and use the buttons above ⬆️ to insert áccéñted letters and symbols¡"
+    },
+
+    "devSocials": {
+        "message": "Developer's Socials:"
+    },
+    "devYT": {
+        "message": "Developer's YouTube Channel:"
+    },
+    "devBlog": {
+        "message": "Developer's Blog:"
+    },
+    "devMoreExtensions": {
+        "message": "More of the developer's extensions (Microsoft Edge Add-ons Store):"
+    },
+    "devGoogleDevProf": {
+        "message": "Developer's Google Developer Profile:"
+    },
+    "devGitHubProf": {
+        "message": "Developer's GitHub Profile:"
+    },
+    "devStackOverflowProf": {
+        "message": "Developer's Stack Overflow Profile:"
+    },
+    "openSource": {
+        "message": "This extension is open source!<br><a href=\"https://github.com/devsai9/Multi-Lingual-Input-Tools\">View GitHub</a>"
     }
 }

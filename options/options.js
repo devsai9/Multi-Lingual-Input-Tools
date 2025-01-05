@@ -1,3 +1,5 @@
+document.title = (chrome.i18n.getMessage("options") || "Options") + " - " + (chrome.i18n.getMessage("appName") || "Multi-Lingual Input Tools");
+
 /* GET Stored Vars */
 var colorModeRestored = '/';
 var languageRestored = '/';
@@ -18,7 +20,7 @@ function getChromeVars() {
 function useRestoredColorMode(colorModeRestored) {
     if (colorModeRestored == "light") {
         document.getElementById("color-mode-checkbox").checked = false;
-        document.getElementById("color-mode-label").setAttribute("title", "Light Mode");
+        document.getElementById("color-mode-label").setAttribute("title", chrome.i18n.getMessage("lightMode") || "Light Mode");
         // document.getElementById("color-mode-label").innerText = "Light Mode";
         document.getElementById("mode-icon").classList.add("bi");
         document.getElementById("mode-icon").classList.add("bi-brightness-high-fill");

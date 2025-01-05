@@ -14,44 +14,45 @@
     <br>
     <div class="options-container">
         <div class="title">
-            <h1>Multi-Lingual Input Tools</h1>
+            <h1 data-i18n="appName">Multi-Lingual Input Tools</h1>
         </div>
         <br>
         <div class="options">
             <div class="color-mode">
-                <h2>Color Mode:</h3>
+                <h2 data-i18n="colorMode">Color Mode:</h2>
 
                 <div class="color-mode-buttons">
                     <input type="checkbox" id="color-mode-checkbox" class="btn-check" name="color-mode-checkbox" value="color-mode-button">
-                    <label for="color-mode-checkbox" id="color-mode-label" class="btn btn-outline-primary mb-2" title="Dark Mode"><i id="mode-icon" class=""></i></label>
+                    <label for="color-mode-checkbox" id="color-mode-label" class="btn btn-outline-primary mb-2" title="Dark Mode"><i id="mode-icon" data-i18n="darkMode;title"></i></label>
                 </div>
             </div>
             <br>
             <div class="language">
-                <h2>Language:</h2>
+                <h2 data-i18n="language">Language:</h2>
 
                 <div class="input-group language-options">
                     <input type="radio" class="btn-check" name="language" id="spanish" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="spanish" id="spanish-label">Spanish 🇪🇸</label>
+                    <label class="btn btn-outline-primary" for="spanish" id="spanish-label" data-i18n="spanish">Spanish 🇪🇸</label>
 
                     <input type="radio" class="btn-check" name="language" id="french" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="french" id="french-label">French 🇫🇷</label>
+                    <label class="btn btn-outline-primary" for="french" id="french-label" data-i18n="french">French 🇫🇷</label>
 
                     <input type="radio" class="btn-check" name="language" id="german" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="german" id="german-label">German 🇩🇪</label>
+                    <label class="btn btn-outline-primary" for="german" id="german-label" data-i18n="german">German 🇩🇪</label>
 
                     <input type="radio" class="btn-check" name="language" id="romanian" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="romanian" id="romanian-label">Romanian 🇷🇴</label>
+                    <label class="btn btn-outline-primary" for="romanian" id="romanian-label" data-i18n="romanian">Romanian 🇷🇴</label>
 
                     <input type="radio" class="btn-check" name="language" id="dutch" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="dutch" id="dutch-label">Dutch 🇳🇱</label>
+                    <label class="btn btn-outline-primary" for="dutch" id="dutch-label" data-i18n="dutch">Dutch 🇳🇱</label>
                     
                     <input type="radio" class="btn-check" name="language" id="portuguese" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="portuguese" id="portuguese-label">Portuguese 🇵🇹</label>
+                    <label class="btn btn-outline-primary" for="portuguese" id="portuguese-label" data-i18n="portuguese">Portuguese 🇵🇹</label>
                 </div>
             </div>
         </div>
     </div>
     <script src="options.js"></script>
+    <script src="../i18n.js"></script>
 </body>
 </html>

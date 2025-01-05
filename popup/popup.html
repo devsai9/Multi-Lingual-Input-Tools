@@ -12,34 +12,34 @@
 </head>
 <body>
     <div class="menu-icons">
-        <i class="bi bi-globe2" id="about-icon" title="About the Developer"></i>&nbsp;
-        <i class="bi bi-keyboard" id="fta-icon" title="Full Typing Area (FTA)"></i>&nbsp;
-        <i class="bi bi-gear-fill" id="settings-icon" title="Extension Settings"></i>
+        <i class="bi bi-globe2" id="about-icon" title="About the Developer" data-i18n="aboutDevMenu;title"></i>&nbsp;
+        <i class="bi bi-keyboard" id="fta-icon" title="Full Typing Area (FTA)" data-i18n="FTAMenu;title"></i>&nbsp;
+        <i class="bi bi-gear-fill" id="settings-icon" title="Extension Settings" data-i18n="settingsMenu;title"></i>
     </div>
     <br>
     <div class="custom-container" id="language-select-prompt">
         <div class="title" id="prompt-title">
-            <h1>Multi-Lingual Input Tools</h1>
+            <h1 data-i18n="appName">Multi-Lingual Input Tools</h1>
             <br>
         </div>
         <div class="subtitle">
-            <h2>Please select a language</h2>
+            <h2 data-i18n="selectLangHeader">Please select a language</h2>
             <br>
         </div>
         <div class="prompt">
-            <p>Please go to <i class="bi bi-gear-fill"></i> (<a id="prompt-options-page-en">options</a>) to select a language</p>
+            <p data-i18n="goToOptions">Please go to <i class="bi bi-gear-fill"></i> to select a language</p>
         </div>
     </div>
     <div class="custom-container" id="ultimate-container">
         <div class="title">
-            <h1>Multi-Lingual Input Tools</h1>
+            <h1 data-i18n="appName">Multi-Lingual Input Tools</h1>
         </div>
         <div class="subtitle">
             <h2 id="type-lang">Type </h2>
         </div>
         <div class="input-buttons">
             <input type="checkbox" id="uppercase" class="btn-check" name="uppercase-letters" value=" uppercase">
-            <label for="uppercase" id="uppercase-label" class="btn btn-outline-primary mb-3 mt-1"> uppercase</label><br>
+            <label for="uppercase" id="uppercase-label" class="btn btn-outline-primary mb-3 mt-1" data-i18n="uppercase"> uppercase</label><br>
             <button id="accent-a-forward" class="input-button btn btn-light spanish portuguese">á</button>
             <button id="accent-a-backward" class="input-button btn btn-light french portuguese">à</button>
             <button id="accent-a-doubledot" class="input-button btn btn-light german">ä</button>
@@ -77,6 +77,7 @@
     </div>
     <div id="scripts">
         <script src="popup.js"></script>
+        <script src="../i18n.js"></script>
     </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
+document.title = (chrome.i18n.getMessage("FTA") || "Full Typing Area") + " - " + (chrome.i18n.getMessage("appName") || "Multi-Lingual Input Tools");
+
 /* -------------------
 |  DEFINE VARIABLES  |
 ------------------- */
@@ -43,7 +45,6 @@ const typingArea = document.getElementById('textbox');
 
 // Select Language Prompt
 const langPromptContainer = document.getElementById('language-select-prompt');
-const langPrompt_options_a = document.getElementById('prompt-options-page');
 const typingContainer = document.getElementById('ultimate-container');
 
 /* -----------------------
@@ -104,7 +105,7 @@ function useRestoredLanguage(languageRestored) {
             typingArea.style.fontFamily = 'sans-serif';
         }
 
-        document.getElementById('type-lang').textContent = 'Type ' + languageRestored.charAt(0).toUpperCase() + languageRestored.slice(1);
+        document.getElementById('type-lang').textContent = chrome.i18n.getMessage("type") + " " + chrome.i18n.getMessage(languageRestored) || 'Type ' + languageRestored.charAt(0).toUpperCase() + languageRestored.slice(1);
     }
 }
 
@@ -142,14 +143,6 @@ accent_beta.onclick = function() {insertCharacter('ß');};
 accent_y_doubledot.onclick = function() {insertCharacter('ÿ');};
 upside_down_question_mark.onclick = function() {insertCharacter('¿');};
 upside_down_exclamation_point.onclick = function() {insertCharacter('¡');};
-
-langPrompt_options_a.addEventListener('click', function() {
-    if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-    } else {
-        window.open(chrome.runtime.getURL('/options/options.html'));
-    }
-});
 
 function insertCharacter(character) {
     const start = typingArea.selectionStart;

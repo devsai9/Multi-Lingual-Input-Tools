@@ -12,7 +12,7 @@ Privacy is of utmost importance to us. We store no identifying user data.<br>
 To learn more, please read the [Privacy Policy](PRIVACY.md).
 
 # Setup & Usage
-Foe an in-depth and up-to-date user guide, please visit the [user guide](https://multi-lingual.extensions.saisiddhish.me/guide/user-guide) on our website.
+For an in-depth and up-to-date user guide, please visit the [user guide](https://multi-lingual.extensions.saisiddhish.me/guide/user-guide) on our website.
 
 # Contact & Support: 
 Please visit the [contact page](https://multi-lingual.extensions.saisiddhish.me/guide/contact) on our website for the most up-to-date contact information.
